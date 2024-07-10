@@ -124,7 +124,7 @@ section {
 /* PROFILE SECTION */
 .profile-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 5rem;
   height: 80vh;
@@ -143,6 +143,10 @@ section {
 
 .text-container {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .text-container .intro {
@@ -248,20 +252,22 @@ section {
 
 .skills-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  align-items: center;
+  height: 70vh;
 }
 
 .skill-box {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: fit-content;
-  justify-content: center;
 }
 
 .skill-box .icon {
@@ -320,13 +326,17 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  align-items: center;
+  height: 70vh;
 }
 
 .contact-item {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -334,27 +344,6 @@ section {
 
 .contact-item .icon {
   height: 2rem;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem;
-}
-
-footer .nav-links {
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-}
-
-footer .nav-links a {
-  color: #000;
-  text-decoration: none;
-}
-
-footer .nav-links a:hover {
-  text-decoration: underline;
 }
 
 /* Media Queries */

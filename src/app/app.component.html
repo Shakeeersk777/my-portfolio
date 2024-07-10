@@ -107,23 +107,9 @@
   <p class="intro">Get in Touch</p>
   <h1 class="title">Contact Me</h1>
   <div class="contact-info">
-    <div class="contact-item">
-      <img src="../assets/images/email.png" alt="Email Icon" class="icon" />
-      <p>
-        <a href="mailto:{{ userInfo.email }}">{{ userInfo.email }}</a>
-      </p>
-    </div>
-    <div class="contact-item">
-      <img
-        src="../assets/images/linkedin.png"
-        alt="LinkedIn Icon"
-        class="icon"
-      />
-      <p><a href="{{ socialUrls.linkedIn }}">LinkedIn</a></p>
-    </div>
-    <div class="contact-item">
-      <img src="../assets/images/github.png" alt="LinkedIn Icon" class="icon" />
-      <p><a href="{{ socialUrls.linkedIn }}">Github </a></p>
+    <div class="contact-item" *ngFor="let contact of contactInfo">
+      <img [src]="contact.img" [alt]="contact.key" class="icon" />
+      <p>{{ contact.key }}</p>
     </div>
   </div>
 </section>

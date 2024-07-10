@@ -36,6 +36,24 @@ export class AppComponent {
     degree: 'Bachelor of Technology in Mechanical engineering',
   };
 
+  contactInfo = [
+    {
+      key: 'Mobile',
+      value: '+91 1234567890',
+      img: '../assets/images/email.png',
+    },
+    {
+      key: 'Email',
+      value: '+91 1234567890',
+      img: '../assets/images/email.png',
+    },
+    {
+      key: 'Linked In',
+      value: '+91 1234567890',
+      img: '../assets/images/email.png',
+    },
+  ];
+
   experienceData = [
     {
       title: 'Frontend Development',
@@ -59,12 +77,6 @@ export class AppComponent {
     },
     {
       title: 'Project Two',
-      imgSrc: '../assets/images/profile-pic.png',
-      githubLink: 'https://github.com/',
-      liveDemoLink: 'https://github.com/',
-    },
-    {
-      title: 'Project Three',
       imgSrc: '../assets/images/profile-pic.png',
       githubLink: 'https://github.com/',
       liveDemoLink: 'https://github.com/',
