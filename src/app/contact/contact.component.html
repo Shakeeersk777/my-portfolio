@@ -1,0 +1,10 @@
+<section class="contact-section" id="contact">
+  <p class="intro">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+  <div class="contact-info">
+    <div class="contact-item" *ngFor="let contact of contacts">
+      <img [src]="contact.img" [alt]="contact.key" class="icon" />
+      <p>{{ contact.key }}</p>
+    </div>
+  </div>
+</section>

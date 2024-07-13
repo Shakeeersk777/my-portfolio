@@ -1,0 +1,18 @@
+<section class="profile-section" id="profile">
+  <div class="pic-container">
+    <img src="../assets/images/profile-pic.png" alt="Profile Picture" />
+  </div>
+  <div class="text-container">
+    <p class="intro">Hello, I'm</p>
+    <h1 class="name">{{ intro.username }}</h1>
+    <p class="role">{{ intro.role }}</p>
+    <div class="btn-container">
+      <button
+        class="btn btn-secondary"
+        (click)="openDemo('./assets/resume-example.pdf')"
+      >
+        View Resume
+      </button>
+    </div>
+  </div>
+</section>

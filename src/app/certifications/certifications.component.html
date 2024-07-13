@@ -1,0 +1,16 @@
+<section class="certifications-section" id="certifications">
+  <p class="intro">Browse My Recent</p>
+  <h1 class="title">Certifications</h1>
+  <div class="certifications-details">
+    <div class="certification-box" *ngFor="let certification of certifications">
+      <div class="image-container">
+        <img
+          [src]="certification.imgSrc"
+          [alt]="certification.title"
+          class="certification-img"
+        />
+      </div>
+      <h2 class="certification-title">{{ certification.title }}</h2>
+    </div>
+  </div>
+</section>

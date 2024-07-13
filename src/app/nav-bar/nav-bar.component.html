@@ -1,0 +1,32 @@
+<nav class="desktop-nav">
+  <div class="logo">{{ username }}</div>
+  <div>
+    <ul class="nav-links">
+      <li *ngFor="let item of navItems">
+        <a [href]="'#' + item.id">{{ item.label }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="hamburger-nav">
+  <div class="logo">{{ username }}</div>
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-links">
+      <ul>
+        <li *ngFor="let item of navItems">
+          <a
+            [href]="'#' + item.id"
+            (click)="scrollToSection(item.id); toggleMenu()"
+            >{{ item.label }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

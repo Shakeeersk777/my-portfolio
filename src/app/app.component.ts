@@ -1,37 +1,33 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { IntroComponent } from './intro/intro.component';
+import { CertificationsComponent } from "./certifications/certifications.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    NavBarComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    ContactComponent,
+    AboutComponent,
+    IntroComponent,
+    CertificationsComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  toggleMenu() {
-    const hamburgerIcon = document.querySelector(
-      '.hamburger-icon'
-    ) as HTMLElement;
-    const menuLinks = document.querySelector('.menu-links') as HTMLElement;
-
-    hamburgerIcon.classList.toggle('open');
-    menuLinks.classList.toggle('open');
-  }
-
-  navItems = [
-    { id: 'about', label: 'About', sectionClass: 'about-section' },
-    {
-      id: 'experience',
-      label: 'Experience',
-      sectionClass: 'experience-section',
-    },
-    { id: 'projects', label: 'Projects', sectionClass: 'projects-section' },
-    { id: 'contact', label: 'Contact', sectionClass: 'contact-section' },
-  ];
-
   education = {
     degree: 'Bachelor of Technology in Mechanical engineering',
   };
@@ -56,14 +52,42 @@ export class AppComponent {
 
   experienceData = [
     {
-      title: 'Frontend Development',
+      category: 'Frontend Development',
       skills: [
-        { name: 'HTML', proficiency: 'Experienced' },
-        { name: 'CSS', proficiency: 'Experienced' },
-        { name: 'SASS', proficiency: 'Intermediate' },
-        { name: 'JavaScript', proficiency: 'Basic' },
-        { name: 'TypeScript', proficiency: 'Basic' },
-        { name: 'Material UI', proficiency: 'Intermediate' },
+        { name: 'HTML', img: '../assets/images/html.png' },
+        { name: 'CSS', img: '../assets/images/css.png' },
+        { name: 'SASS', img: '../assets/images/sass.png' },
+        { name: 'Bootstrap', img: '../assets/images/bootstrap.png' },
+        { name: 'Angular', img: '../assets/images/angular.png' },
+        { name: 'React', img: '../assets/images/react.png' },
+        { name: 'React Native', img: '../assets/images/react.png' },
+      ],
+    },
+    {
+      category: 'Backend Development',
+      skills: [
+        { name: 'JavaScript', img: '../assets/images/js.png' },
+        { name: 'TypeScript', img: '../assets/images/typescript.png' },
+        { name: 'Node JS', img: '../assets/images/node-js.png' },
+        // { name: 'Express JS', img: '../assets/images/expressjs.png' },
+        { name: 'Rest API', img: '../assets/images/restapi.png' },
+        { name: 'PostgreSQL', img: '../assets/images/postgre.png' },
+        { name: 'MongoDB', img: '../assets/images/mongodb.png' },
+      ],
+    },
+    {
+      category: 'Version Control',
+      skills: [
+        { name: 'Git', img: '../assets/images/git.png' },
+        { name: 'SVN', img: '../assets/images/svn.png' },
+      ],
+    },
+    {
+      category: 'Hosting',
+      skills: [
+        { name: 'Vercel', img: '../assets/images/vercel.png' },
+        { name: 'Render', img: '../assets/images/invalid-image.png' },
+        { name: 'AWS S3', img: '../assets/images/aws.png' },
       ],
     },
   ];
@@ -92,7 +116,7 @@ export class AppComponent {
     username: 'Shakeer Shaik',
     profile: '',
     email: 'test@gmail.com',
-    contact: '+91',
+    contact: this.contactInfo,
     role: 'Full stack web developer',
     experience: this.experienceData,
     projects: this.projects,
@@ -101,14 +125,6 @@ export class AppComponent {
 
   navigateToContact(): void {
     window.location.href = './#contact';
-  }
-
-  openGithub(url: string) {
-    window.open(url, '_blank');
-  }
-
-  openDemo(url: string) {
-    window.open(url, '_blank');
   }
 
   scrollToContact() {

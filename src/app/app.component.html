@@ -1,115 +1,13 @@
-<nav class="desktop-nav">
-  <div class="logo">{{ userInfo.username }}</div>
-  <div>
-    <ul class="nav-links">
-      <li *ngFor="let item of navItems">
-        <a [href]="'#' + item.id">{{ item.label }}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<app-nav-bar [username]="userInfo.username" />
 
-<nav class="hamburger-nav">
-  <div class="logo">{{ userInfo.username }}</div>
-  <div class="hamburger-menu">
-    <div class="hamburger-icon" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="menu-links">
-      <ul>
-        <li *ngFor="let item of navItems">
-          <a [href]="'#' + item.id" (click)="toggleMenu()">{{ item.label }}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<app-intro [intro]="userInfo" />
 
-<section class="profile-section" id="profile">
-  <div class="pic-container">
-    <img src="../assets/images/profile-pic.png" alt="Profile Picture" />
-  </div>
-  <div class="text-container">
-    <p class="intro">Hello, I'm</p>
-    <h1 class="name">{{ userInfo.username }}</h1>
-    <p class="role">{{ userInfo.role }}</p>
-    <div class="btn-container">
-      <button
-        class="btn cv-btn"
-        (click)="openDemo('./assets/resume-example.pdf')"
-      >
-        Download CV
-      </button>
-    </div>
-  </div>
-</section>
+<app-about [about]="userInfo" />
 
-<section class="about-section" id="about">
-  <p class="intro">Get To Know More</p>
-  <h1 class="title">About Me</h1>
-  <div class="details-container">
-    <div class="detail-box">
-      <img
-        src="../assets/images/experience.png"
-        alt="Experience Icon"
-        class="icon"
-      />
-      <h3>Experience</h3>
-      <p>1+ years<br />Frontend Development</p>
-    </div>
-    <div class="detail-box">
-      <img
-        src="../assets/images/education.png"
-        alt="Education Icon"
-        class="icon"
-      />
-      <h3>Education</h3>
-      <p>{{ userInfo.education.degree }}</p>
-    </div>
-  </div>
-</section>
+<app-experience [experiences]="userInfo.experience" />
 
-<section class="experience-section" id="experience">
-  <p class="intro">Explore My</p>
-  <h1 class="title">Experience</h1>
-  <div class="experience-details">
-    <div class="experience-category" *ngFor="let category of experienceData">
-      <div class="skills-container">
-        <div class="skill-box" *ngFor="let skill of category.skills">
-          <h3>{{ skill.name }}</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-certifications [certifications]="userInfo.projects" />
 
-<section class="projects-section" id="projects">
-  <p class="intro">Browse My Recent</p>
-  <h1 class="title">Projects</h1>
-  <div class="projects-details">
-    <div class="project-box" *ngFor="let project of projects">
-      <div class="image-container">
-        <img [src]="project.imgSrc" [alt]="project.title" class="project-img" />
-      </div>
-      <h2 class="project-title">{{ project.title }}</h2>
-      <div class="btn-container">
-        <button class="btn github-btn" (click)="openGithub(project.githubLink)">
-          Github
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+<app-projects [projects]="userInfo.projects" />
 
-<section class="contact-section" id="contact">
-  <p class="intro">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <div class="contact-info">
-    <div class="contact-item" *ngFor="let contact of contactInfo">
-      <img [src]="contact.img" [alt]="contact.key" class="icon" />
-      <p>{{ contact.key }}</p>
-    </div>
-  </div>
-</section>
+<app-contact [contacts]="userInfo.contact" />

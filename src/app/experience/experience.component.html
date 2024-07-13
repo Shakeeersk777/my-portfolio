@@ -1,0 +1,21 @@
+<section class="experience-section" id="experience">
+  <p class="experience-intro">Explore My</p>
+  <h1 class="experience-title">Experience</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4" *ngFor="let experience of experiences">
+        <div class="experience-category">
+          <h2 class="sub-title">{{ experience.category }}</h2>
+          <div class="skills-list">
+            <div class="skill-box" *ngFor="let skill of experience.skills">
+              <img [src]="skill.img" [alt]="skill.name">
+              <div class="skill-info">
+                <h3 class="m-0">{{ skill.name }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

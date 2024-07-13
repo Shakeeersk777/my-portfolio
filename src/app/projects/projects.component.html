@@ -1,0 +1,17 @@
+<section class="projects-section" id="projects">
+  <p class="intro">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+  <div class="projects-details">
+    <div class="project-box" *ngFor="let project of projects">
+      <div class="image-container">
+        <img [src]="project.imgSrc" [alt]="project.title" class="project-img" />
+      </div>
+      <h2 class="project-title">{{ project.title }}</h2>
+      <div class="btn-container">
+        <button class="btn btn-secondary" (click)="openGithub(project.githubLink)">
+          Github
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

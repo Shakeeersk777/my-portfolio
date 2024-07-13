@@ -1,0 +1,72 @@
+/* CONTACT SECTION */
+.contact-section {
+  padding: 4rem 2rem; // Added padding for spacing
+  // background: #f8f9fa; 
+  text-align: center; // Center text
+
+  .intro {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600; // Bold title
+  }
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; // Increased gap for better spacing
+    align-items: center;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem; // Increased padding for a more substantial look
+    border: 1px solid #ddd;
+    border-radius: 12px; // More rounded corners
+    background: #fff; // White background for contact items
+    transition: box-shadow 0.3s; // Smooth shadow effect
+
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Shadow on hover
+    }
+  }
+
+  .icon {
+    height: 2.5rem; // Increased icon size for better visibility
+    width: auto; // Maintain aspect ratio
+    cursor: pointer;
+    transition: transform 0.2s; // Smooth icon scaling
+
+    &:hover {
+      transform: scale(1.1); // Slight scaling on hover
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 100%; // Full width on small screens
+    max-width: 350px; // Adjusted max width
+
+    p {
+      font-size: 1rem; // Adjusted font size for smaller screens
+    }
+  }
+}

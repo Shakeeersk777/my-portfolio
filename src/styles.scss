@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth; // Enables smooth scrolling for all links
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: red;
+/* GENERAL */
+p {
+  color: #555;
 }
 
-html {
-  scroll-behavior: smooth;
+a,
+.btn {
+  transition: all 300ms ease;
 }
