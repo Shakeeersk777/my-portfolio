@@ -108,8 +108,7 @@ export class AppComponent {
       title: 'Timesheet Management',
       img: '../assets/images/timesheet-app-preview.png',
       githubLink: '',
-      liveDemoLink:
-        'https://timesheet-6ln3itzhr-shakeer-shaiks-projects.vercel.app/app/timesheet/dashboard',
+      liveDemoLink: 'https://shakeer-timesheet-app.vercel.app/app',
     },
     {
       title: 'Bank Portfolio',
