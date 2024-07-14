@@ -106,14 +106,14 @@ export class AppComponent {
   projects: IProject[] = [
     {
       title: 'Timesheet Management',
-      img: '../assets/images/profile-pic.png',
+      img: '../assets/images/timesheet-app-preview.png',
       githubLink: '',
       liveDemoLink:
         'https://timesheet-6ln3itzhr-shakeer-shaiks-projects.vercel.app/app/timesheet/dashboard',
     },
     {
       title: 'Bank Portfolio',
-      img: '../assets/images/profile-pic.png',
+      img: '../assets/images/bank-app-preview.png',
       githubLink: 'https://github.com/Shakeeersk777/Shakeer-Bank',
       liveDemoLink:
         'https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button',
@@ -155,12 +155,4 @@ export class AppComponent {
     certifications: this.certifications,
     socialUrls: this.socialUrls,
   };
-
-  navigateToContact(): void {
-    window.location.href = './#contact';
-  }
-
-  scrollToContact() {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  }
 }
