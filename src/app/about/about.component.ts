@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IUserInfo } from '../../core/user-info.interface';
 
 @Component({
   selector: 'app-about',
@@ -8,5 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  @Input() about: any;
+  @Input() about!: IUserInfo;
 }

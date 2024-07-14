@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { IExperience } from '../../core/user-info.interface';
 
 @Component({
   selector: 'app-experience',
@@ -9,5 +10,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
-  @Input() experiences: any[] = [];
+  @Input() experiences: IExperience[] = [];
 }

@@ -1,58 +1,67 @@
-/* PROFILE SECTION */
 .profile-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 5rem;
   height: 80vh;
-  padding: 2rem; /* Added padding for better spacing */
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto; // Allow the section to adjust based on content
+    align-items: center;
+  }
 }
 
 .pic-container {
   display: flex;
   margin: auto 0;
+
   img {
     height: 350px;
     width: 350px;
-    border-radius: 100%;
+    border-radius: 50%; // Use 50% for a perfect circle
+    object-fit: cover; // Ensure the image covers the container
   }
 }
 
 .text-container {
   text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
+  align-items: center; // Center align the text
 
-.text-container .intro {
-  font-weight: 600; 
-}
+  .intro {
+    font-weight: 600;
+    margin-bottom: 0.5rem; // Add space below intro
+  }
 
-.text-container .name {
-  font-size: 3rem;
-  color: #333;
-  font-weight: 500; // Bold title
-}
+  .name {
+    font-size: 3rem;
+    color: #333;
+    font-weight: 500;
+  }
 
-.text-container .role {
-  font-size: 1.5rem;
-  color: #777;
-  font-weight: 600; // Bold title
+  .role {
+    font-size: 1.5rem;
+    color: #777;
+    font-weight: 600;
+    margin: 0.5rem 0; // Add space around role
+  }
 }
 
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
 
-.btn {
-  font-weight: 600;
-  padding: 1rem;
-  // width: 8rem;
-  border-radius: 2rem;
+  .btn {
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 2rem;
+    max-width: 200px; // Limit button width
+    width: 100%; // Full width for smaller screens
+  }
 }
 
 .socials-container {
@@ -60,11 +69,12 @@
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
-}
 
-.icon {
-  cursor: pointer;
-  height: 2rem;
+  .icon {
+    cursor: pointer;
+    height: 2rem;
+    font-size: 1.5rem; // Increased icon size for better visibility
+  }
 }
 
 .detail-box h3 {
@@ -75,24 +85,14 @@
 /* Media Queries */
 @media (max-width: 1024px) {
   .profile-section {
-    gap: 3rem; /* Reduce gap for smaller screens */
+    gap: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-  }
-
   .pic-container img {
     height: 300px;
     width: 300px;
-  }
-
-  .text-container {
-    margin-top: 2rem;
   }
 
   .text-container .name {
@@ -105,10 +105,6 @@
 }
 
 @media (max-width: 480px) {
-  .profile-section {
-    padding-top: 2rem;
-  }
-
   .pic-container img {
     height: 250px;
     width: 250px;
@@ -125,10 +121,5 @@
   .btn-container {
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 200px;
   }
 }

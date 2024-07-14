@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ICertification } from '../../core/user-info.interface';
 
 @Component({
   selector: 'app-certifications',
@@ -9,5 +10,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './certifications.component.scss',
 })
 export class CertificationsComponent {
-  @Input() certifications: any[] = [];
+  @Input() certifications: ICertification[] = [];
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { IContactInfo } from '../../core/user-info.interface';
 
 @Component({
   selector: 'app-contact',
@@ -9,5 +10,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  @Input() contacts: any;
+  @Input() contacts: IContactInfo[] = [];
+  redirect(url: string) {
+    window.open(url, '_blank'); // Opens the URL in a new tab
+  }
 }

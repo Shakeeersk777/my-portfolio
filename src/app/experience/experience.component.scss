@@ -1,136 +1,141 @@
 .experience-section {
-  text-align: center;
   padding: 4rem 2rem;
+  text-align: center;
 
   .experience-intro {
     font-size: 1.5rem;
-    color: #555;
+    color: #777;
     margin-bottom: 1rem;
   }
 
   .experience-title {
     font-size: 3rem;
-    color: #222;
+    color: #333;
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 600;
+  }
+
+  .experience-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: flex-start; // Adjusted to align items at the top
   }
 
   .experience-category {
     background: #fff;
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid #ddd;
     padding: 2rem;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 2rem); // Two cards side by side
+    max-width: 600px;
+    transition: box-shadow 0.3s, transform 0.3s;
 
     &:hover {
-      transform: translateY(-10px);
-      // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
     }
 
     .sub-title {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
       color: #555;
+      margin-bottom: 1rem;
       font-weight: 500;
     }
 
     .skills-list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between; // Adjusted to space skills evenly
       gap: 1rem;
-      justify-content: space-evenly; /* Center align the skills */
-    }
-  }
-
-  .skill-box {
-    background: #f9f9f9;
-    border-radius: 12px;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    transition: background 0.3s, transform 0.3s;
-    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    img {
-      margin-right: 0.5rem;
-      width: 30px;
-      height: 30px;
     }
 
-    .skill-info {
-      text-align: left;
+    .skill-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fff;
+      transition: box-shadow 0.3s, transform 0.3s;
+      width: calc(50% - 1rem); // Two skills side by side
+      max-width: 300px;
 
-      h3 {
-        font-size: 1.1rem;
-        margin: 0;
-        font-weight: 500;
+      &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+      }
+
+      i {
+        font-size: 1.3rem;
         color: #333;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       p {
-        font-size: 0.9rem;
-        color: #666;
+        font-size: 1.2rem;
+        color: #555;
+        margin: 0;
       }
     }
   }
-}
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  .skill-box {
-    width: calc(50% - 1rem); /* Two boxes per row on medium screens */
-  }
-}
+  @media (max-width: 768px) {
+    .experience-info {
+      flex-direction: column;
+      align-items: center;
+    }
 
-@media (max-width: 768px) {
-  .experience-category {
-    max-width: 100%;
-    width: auto;
-    margin: 0 auto;
-  }
+    .experience-category {
+      width: 100%;
+      max-width: 600px;
 
-  .skill-box {
-    width: calc(50% - 1rem);
-  }
+      .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .skill-info h3 {
-    font-size: 1rem;
-  }
+      .skill-box {
+        width: 100%;
+      }
 
-  .skill-info p {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .experience-category {
-    max-width: 100%;
-    width: auto;
-    margin: 0 auto;
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 
-  .skills-list {
-    flex-direction: column; /* Stack skills vertically */
-    align-items: center; /* Center align the skills */
-  }
+  @media (max-width: 480px) {
+    .experience-title {
+      font-size: 2.5rem;
+    }
 
-  .skill-box {
-    width: 100%; /* Full width on small screens */
-    justify-content: flex-start;
-    align-items: center;
-  }
+    .experience-intro {
+      font-size: 1.25rem;
+    }
 
-  .experience-title {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
-  }
+    .experience-category {
+      padding: 1rem;
 
-  .experience-intro {
-    font-size: 1.25rem; /* Adjust font size for smaller screens */
-  }
+      .skill-box {
+        padding: 1rem;
 
-  .sub-title {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+        i {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 }

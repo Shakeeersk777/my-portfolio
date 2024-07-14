@@ -34,7 +34,8 @@
     transition: transform 0.3s ease-in-out; // Smooth transition
 
     &:hover {
-      transform: translateY(-10px); // Lift effect on hover
+      transform: translateY(-5px); // Lift effect on hover
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .image-container {
@@ -51,7 +52,7 @@
     }
 
     .project-title {
-      font-size: 1.5rem; // Title size
+      font-size: 1.2rem; // Title size
       margin-bottom: 1rem;
     }
 

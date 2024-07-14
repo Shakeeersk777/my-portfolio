@@ -1,8 +1,7 @@
 /* CONTACT SECTION */
 .contact-section {
-  padding: 4rem 2rem; // Added padding for spacing
-  // background: #f8f9fa; 
-  text-align: center; // Center text
+  padding: 4rem 2rem;
+  text-align: center;
 
   .intro {
     font-size: 1.5rem;
@@ -14,14 +13,14 @@
     font-size: 3rem;
     color: #333;
     margin-bottom: 2rem;
-    font-weight: 600; // Bold title
+    font-weight: 600;
   }
 
   .contact-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem; // Increased gap for better spacing
+    gap: 2rem;
     align-items: center;
   }
 
@@ -31,42 +30,70 @@
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    padding: 1.5rem; // Increased padding for a more substantial look
+    padding: 1.5rem;
     border: 1px solid #ddd;
-    border-radius: 12px; // More rounded corners
-    background: #fff; // White background for contact items
-    transition: box-shadow 0.3s; // Smooth shadow effect
+    border-radius: 12px;
+    background: #fff;
+    transition: box-shadow 0.3s, transform 0.3s; // Added transform for smoother effect
 
     &:hover {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Shadow on hover
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px); // Slight lift effect on hover
     }
-  }
 
-  .icon {
-    height: 2.5rem; // Increased icon size for better visibility
-    width: auto; // Maintain aspect ratio
-    cursor: pointer;
-    transition: transform 0.2s; // Smooth icon scaling
+    i {
+      font-size: 1.3rem; // Adjusted icon size for better visibility
+      color: #333; // Icon color
+      transition: transform 0.2s; // Smooth icon scaling
 
-    &:hover {
-      transform: scale(1.1); // Slight scaling on hover
+      &:hover {
+        transform: scale(1.1); // Slight scaling on hover
+      }
     }
-  }
-}
-
-// Media Queries
-@media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-item {
-    width: 100%; // Full width on small screens
-    max-width: 350px; // Adjusted max width
 
     p {
-      font-size: 1rem; // Adjusted font size for smaller screens
+      font-size: 1.2rem; // Adjusted font size for better readability
+      color: #555; // Text color
+      margin: 0;
+    }
+  }
+
+  // Media Queries
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-item {
+      width: 100%; // Full width on small screens
+      max-width: 350px; // Adjusted max width
+
+      p {
+        font-size: 1rem; // Adjusted font size for smaller screens
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2.5rem; // Adjusted title size for very small screens
+    }
+
+    .intro {
+      font-size: 1.25rem; // Adjusted intro size for very small screens
+    }
+
+    .contact-item {
+      padding: 1rem; // Reduced padding for very small screens
+
+      i {
+        font-size: 1.2rem; // Adjusted icon size for very small screens
+      }
+
+      p {
+        font-size: 0.9rem; // Adjusted font size for very small screens
+      }
     }
   }
 }

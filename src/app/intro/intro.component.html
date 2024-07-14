@@ -1,18 +1,28 @@
 <section class="profile-section" id="profile">
   <div class="pic-container">
-    <img src="../assets/images/profile-pic.png" alt="Profile Picture" />
+    <img [src]="intro.profile" alt="Profile Picture" class="img-thumbnail" />
   </div>
   <div class="text-container">
     <p class="intro">Hello, I'm</p>
     <h1 class="name">{{ intro.username }}</h1>
     <p class="role">{{ intro.role }}</p>
-    <div class="btn-container">
+    <!-- <div class="btn-container m-3">
       <button
         class="btn btn-secondary"
         (click)="openDemo('./assets/resume-example.pdf')"
       >
-        View Resume
+        Download Resume
       </button>
+    </div> -->
+    <div class="socials-container">
+      <i
+        class="icon fa-brands fa-github"
+        (click)="redirect(intro.socialUrls.github)"
+      ></i>
+      <i
+        class="icon fa-brands fa-linkedin"
+        (click)="redirect(intro.socialUrls.linkedIn)"
+      ></i>
     </div>
   </div>
 </section>

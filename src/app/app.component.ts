@@ -7,7 +7,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { IntroComponent } from './intro/intro.component';
-import { CertificationsComponent } from "./certifications/certifications.component";
+import { CertificationsComponent } from './certifications/certifications.component';
+import {
+  ICertification,
+  IContactInfo,
+  IEducation,
+  IExperience,
+  IProject,
+  IUserInfo,
+} from '../core/user-info.interface';
 
 @Component({
   selector: 'app-root',
@@ -21,106 +29,131 @@ import { CertificationsComponent } from "./certifications/certifications.compone
     ContactComponent,
     AboutComponent,
     IntroComponent,
-    CertificationsComponent
-],
+    CertificationsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  education = {
+  education: IEducation = {
     degree: 'Bachelor of Technology in Mechanical engineering',
   };
 
-  contactInfo = [
+  contactInfo: IContactInfo[] = [
     {
       key: 'Mobile',
-      value: '+91 1234567890',
-      img: '../assets/images/email.png',
+      value: '+91 9553259698',
+      icon: 'fa-solid fa-phone',
+      url: 'tel:+919553259698',
     },
     {
       key: 'Email',
-      value: '+91 1234567890',
-      img: '../assets/images/email.png',
+      value: 'shakeersk777@gmail.com',
+      icon: 'fa-solid fa-envelope',
+      url: 'mailto:shakeersk777@gmail.com',
     },
     {
       key: 'Linked In',
-      value: '+91 1234567890',
-      img: '../assets/images/email.png',
+      value: 'Shakeer Shaik',
+      icon: 'fa-brands fa-linkedin',
+      url: 'https://www.linkedin.com/in/shakeer-shaik-58125422a/',
     },
   ];
 
-  experienceData = [
+  experience: IExperience[] = [
     {
       category: 'Frontend Development',
       skills: [
-        { name: 'HTML', img: '../assets/images/html.png' },
-        { name: 'CSS', img: '../assets/images/css.png' },
-        { name: 'SASS', img: '../assets/images/sass.png' },
-        { name: 'Bootstrap', img: '../assets/images/bootstrap.png' },
-        { name: 'Angular', img: '../assets/images/angular.png' },
-        { name: 'React', img: '../assets/images/react.png' },
-        { name: 'React Native', img: '../assets/images/react.png' },
+        { name: 'HTML', icon: 'fab fa-html5' },
+        { name: 'CSS', icon: 'fab fa-css3-alt' },
+        { name: 'SASS', icon: 'fab fa-sass' },
+        { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
+        { name: 'Angular', icon: 'fab fa-angular' },
+        { name: 'React', icon: 'fab fa-react' },
+        { name: 'React Native', icon: 'fab fa-react' },
       ],
     },
     {
       category: 'Backend Development',
       skills: [
-        { name: 'JavaScript', img: '../assets/images/js.png' },
-        { name: 'TypeScript', img: '../assets/images/typescript.png' },
-        { name: 'Node JS', img: '../assets/images/node-js.png' },
-        // { name: 'Express JS', img: '../assets/images/expressjs.png' },
-        { name: 'Rest API', img: '../assets/images/restapi.png' },
-        { name: 'PostgreSQL', img: '../assets/images/postgre.png' },
-        { name: 'MongoDB', img: '../assets/images/mongodb.png' },
+        { name: 'JavaScript', icon: 'fab fa-js' },
+        { name: 'TypeScript', icon: '' }, // Font Awesome doesn't have a specific TypeScript icon
+        { name: 'Node JS', icon: 'fab fa-node-js' },
+        { name: 'Express JS', icon: 'fa-solid fa-server' }, // No specific icon for Express.js
+        { name: 'Rest API', icon: 'fas fa-cloud' }, // Custom icon for Rest API
+        { name: 'PostgreSQL', icon: 'fas fa-database' }, // Custom icon for PostgreSQL
+        { name: 'MongoDB', icon: 'fas fa-database' }, // Custom icon for MongoDB
       ],
     },
     {
       category: 'Version Control',
       skills: [
-        { name: 'Git', img: '../assets/images/git.png' },
-        { name: 'SVN', img: '../assets/images/svn.png' },
+        { name: 'Git', icon: 'fa-brands fa-git-alt' },
+        { name: 'SVN', icon: 'fas fa-code-branch' }, // Custom icon for SVN
       ],
     },
     {
       category: 'Hosting',
       skills: [
-        { name: 'Vercel', img: '../assets/images/vercel.png' },
-        { name: 'Render', img: '../assets/images/invalid-image.png' },
-        { name: 'AWS S3', img: '../assets/images/aws.png' },
+        { name: 'Vercel', icon: 'fas fa-cloud' }, // Custom icon for Vercel
+        { name: 'Render', icon: 'fas fa-server' }, // Custom icon for Render
+        { name: 'AWS S3', icon: 'fab fa-aws' },
       ],
     },
   ];
 
-  projects = [
+  projects: IProject[] = [
     {
-      title: 'Project One',
-      imgSrc: '../assets/images/profile-pic.png',
-      githubLink: 'https://github.com/',
-      liveDemoLink: 'https://github.com/',
+      title: 'Timesheet Management',
+      img: '../assets/images/profile-pic.png',
+      githubLink: '',
+      liveDemoLink:
+        'https://timesheet-6ln3itzhr-shakeer-shaiks-projects.vercel.app/app/timesheet/dashboard',
     },
     {
-      title: 'Project Two',
-      imgSrc: '../assets/images/profile-pic.png',
-      githubLink: 'https://github.com/',
-      liveDemoLink: 'https://github.com/',
+      title: 'Bank Portfolio',
+      img: '../assets/images/profile-pic.png',
+      githubLink: 'https://github.com/Shakeeersk777/Shakeer-Bank',
+      liveDemoLink:
+        'https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button',
+    },
+  ];
+
+  certifications: ICertification[] = [
+    {
+      title: 'Angular Developer Certification',
+      img: '../assets/images/infosys-logo.png',
+      link: '',
+    },
+    {
+      title: 'Java Programming Certification',
+      img: '../assets/images/infosys-logo.png',
+      link: '',
+    },
+    {
+      title: 'Digital Marketing Certification',
+      img: '../assets/images/google-logo.png',
+      link: '',
     },
   ];
 
   socialUrls = {
-    linkedIn: '',
-    github: '',
+    github: 'https://github.com/Shakeeersk777',
+    linkedIn: 'https://www.linkedin.com/in/shakeer-shaik-58125422a/',
   };
 
-  userInfo = {
+  userInfo: IUserInfo = {
     username: 'Shakeer Shaik',
-    profile: '',
+    profile: '../assets/images/profile-pic.png',
     email: 'test@gmail.com',
     contact: this.contactInfo,
     role: 'Full stack web developer',
-    experience: this.experienceData,
+    experience: this.experience,
     projects: this.projects,
     education: this.education,
+    certifications: this.certifications,
+    socialUrls: this.socialUrls,
   };
 
   navigateToContact(): void {
