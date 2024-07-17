@@ -4,6 +4,7 @@
 .experience-section {
   padding: 4rem 2rem;
   text-align: center;
+  background: $primary-bg-color;
 
   .experience-info {
     display: flex;
@@ -14,7 +15,6 @@
   }
 
   .experience-category {
-    background: #fff;
     border-radius: 12px;
     border: $border;
     padding: 2rem;
@@ -48,9 +48,8 @@
       gap: 1rem;
       justify-content: center;
       padding: 1.5rem;
-      border: 1px solid #ddd;
+      border: $border;
       border-radius: 12px;
-      background: #fff;
       transition: box-shadow 0.3s, transform 0.3s;
       width: calc(50% - 1rem); // Two skills side by side
       max-width: 300px;

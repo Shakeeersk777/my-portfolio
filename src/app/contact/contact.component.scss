@@ -4,6 +4,7 @@
 .contact-section {
   padding: 4rem 2rem;
   text-align: center;
+  background: $primary-bg-color;
 
   .contact-info {
     display: flex;
@@ -22,7 +23,6 @@
     padding: 1.5rem;
     border: $border;
     border-radius: 12px;
-    background: #fff;
     transition: box-shadow 0.3s, transform 0.3s; // Added transform for smoother effect
 
     &:hover {

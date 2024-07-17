@@ -1,3 +1,4 @@
+@import "../../common/variables";
 .profile-section {
   display: flex;
   justify-content: space-evenly;
@@ -5,7 +6,7 @@
   gap: 5rem;
   height: 80vh;
   padding: 2rem;
-
+  background: $primary-bg-color;
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto; // Allow the section to adjust based on content

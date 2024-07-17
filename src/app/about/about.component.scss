@@ -1,10 +1,10 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-
 .about-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
+  background: $primary-bg-color;
 
   .details-container {
     display: flex;
