@@ -70,8 +70,8 @@ export class AppComponent {
         { name: 'SASS', icon: 'fab fa-sass' },
         { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
         { name: 'Angular', icon: 'fab fa-angular' },
-        { name: 'React', icon: 'fab fa-react' },
-        { name: 'React Native', icon: 'fab fa-react' },
+        // { name: 'React', icon: 'fab fa-react' },
+        // { name: 'React Native', icon: 'fab fa-react' },
       ],
     },
     {
@@ -80,7 +80,7 @@ export class AppComponent {
         { name: 'JavaScript', icon: 'fab fa-js' },
         { name: 'TypeScript', icon: '' }, // Font Awesome doesn't have a specific TypeScript icon
         { name: 'Node JS', icon: 'fab fa-node-js' },
-        { name: 'Express JS', icon: 'fa-solid fa-server' }, // No specific icon for Express.js
+        // { name: 'Express JS', icon: 'fa-solid fa-server' }, // No specific icon for Express.js
         { name: 'Rest API', icon: 'fas fa-cloud' }, // Custom icon for Rest API
         { name: 'PostgreSQL', icon: 'fas fa-database' }, // Custom icon for PostgreSQL
         { name: 'MongoDB', icon: 'fas fa-database' }, // Custom icon for MongoDB

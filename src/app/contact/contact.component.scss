@@ -1,20 +1,9 @@
-/* CONTACT SECTION */
+@import "../../common/common";
+@import "../../common/variables";
+
 .contact-section {
   padding: 4rem 2rem;
   text-align: center;
-
-  .intro {
-    font-size: 1.5rem;
-    color: #777;
-    margin-bottom: 1rem;
-  }
-
-  .title {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
 
   .contact-info {
     display: flex;
@@ -31,7 +20,7 @@
     gap: 1rem;
     justify-content: center;
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: $border;
     border-radius: 12px;
     background: #fff;
     transition: box-shadow 0.3s, transform 0.3s; // Added transform for smoother effect

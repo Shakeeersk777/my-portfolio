@@ -1,19 +1,9 @@
+@import "../../common/common";
+@import "../../common/variables";
+
 .experience-section {
   padding: 4rem 2rem;
   text-align: center;
-
-  .experience-intro {
-    font-size: 1.5rem;
-    color: #777;
-    margin-bottom: 1rem;
-  }
-
-  .experience-title {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
 
   .experience-info {
     display: flex;
@@ -26,7 +16,7 @@
   .experience-category {
     background: #fff;
     border-radius: 12px;
-    border: 1px solid #ddd;
+    border: $border;
     padding: 2rem;
     width: calc(50% - 2rem); // Two cards side by side
     max-width: 600px;

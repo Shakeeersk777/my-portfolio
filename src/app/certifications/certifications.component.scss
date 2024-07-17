@@ -1,20 +1,9 @@
-/* CERTIFICATIONS SECTION */
+@import "../../common/common";
+@import "../../common/variables";
+
 .certifications-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
-
-  .intro {
-    font-size: 1.5rem;
-    color: #777;
-    margin-bottom: 1rem;
-  }
-
-  .title {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 600; // Bold title
-  }
 
   .certifications-details {
     display: flex;
@@ -29,7 +18,7 @@
     align-items: center;
     width: 300px; // Fixed width for uniformity
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: $border;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out; // Smooth transition
 
