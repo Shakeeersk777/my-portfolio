@@ -22,11 +22,11 @@
     border: $border;
     border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s ease-in-out; // Smooth transition
+    transition: box-shadow 0.3s, transform 0.3s;
 
     &:hover {
-      transform: translateY(-5px); // Lift effect on hover
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px); // Slight lift effect on hover
     }
 
     .icon {
