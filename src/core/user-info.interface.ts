@@ -24,12 +24,14 @@ export interface IProject {
   img: string;
   githubLink: string;
   liveDemoLink: string;
+  description: string;
 }
 
 export interface ICertification {
   title: string;
   img: string;
   link: string;
+  description: string;
 }
 
 export interface ISocialUrls {

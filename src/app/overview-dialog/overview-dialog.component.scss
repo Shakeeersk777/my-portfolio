@@ -1,0 +1,64 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+
+.custom-dialog-content {
+  padding: 24px;
+}
+
+.modal-body-content {
+  display: flex;
+  align-items: center;
+
+  .modal-image {
+    flex: 1;
+    margin-right: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .modal-details {
+    flex: 2;
+    padding-left: 20px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .modal-buttons {
+      margin-top: 20px;
+
+      button {
+        font-size: 14px;
+        padding: 8px 16px;
+        text-transform: uppercase;
+      }
+
+      .btn-primary {
+        background-color: $primary-color;
+        color: #fff; // Text color
+      }
+
+      .btn-secondary {
+        background-color: $secondary-color;
+        color: #fff; // Text color
+      }
+    }
+  }
+}
+
+.mat-dialog-actions {
+  padding: 20px;
+
+  .btn-danger {
+    background-color: $danger-color;
+    color: #fff; // Text color
+  }
+}

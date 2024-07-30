@@ -106,16 +106,27 @@ export class AppComponent {
   projects: IProject[] = [
     {
       title: 'Timesheet Management',
-      img: '../assets/images/timesheet-app-preview.png',
+      img: '../assets/images/timesheet.jpg',
+      description:
+        'Test description Test description Test description Test description Test description Test description',
       githubLink: '',
-      liveDemoLink: 'https://shakeer-timesheet-app.vercel.app/app',
+      liveDemoLink: '',
     },
     {
       title: 'Bank Portfolio',
       img: '../assets/images/bank-app-preview.png',
       githubLink: 'https://github.com/Shakeeersk777/Shakeer-Bank',
+      description: 'Test description',
       liveDemoLink:
         'https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button',
+    },
+    {
+      title: 'ATM Management',
+      img: '../assets/images/atm.jpg',
+      githubLink: 'https://github.com/Shakeeersk777/ATM-Project',
+      description: 'Test description',
+      liveDemoLink:
+        '',
     },
   ];
 
@@ -124,15 +135,18 @@ export class AppComponent {
       title: 'Angular Developer Certification',
       img: '../assets/images/infosys-logo.png',
       link: '',
+      description: 'Test description',
     },
     {
       title: 'Java Programming Certification',
       img: '../assets/images/infosys-logo.png',
+      description: 'Test description',
       link: '',
     },
     {
       title: 'Digital Marketing Certification',
       img: '../assets/images/google-logo.png',
+      description: 'Test description',
       link: '',
     },
   ];
