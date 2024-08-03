@@ -3,11 +3,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { IntroComponent } from './intro/intro.component';
-import { CertificationsComponent } from './certifications/certifications.component';
 import {
   ICertification,
   IContactInfo,
@@ -16,6 +14,7 @@ import {
   IProject,
   IUserInfo,
 } from '../core/user-info.interface';
+import { CardComponent } from './card/card.component';
 
 @Component({
   selector: 'app-root',
@@ -25,11 +24,10 @@ import {
     CommonModule,
     NavBarComponent,
     ExperienceComponent,
-    ProjectsComponent,
     ContactComponent,
     AboutComponent,
     IntroComponent,
-    CertificationsComponent,
+    CardComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -108,7 +106,7 @@ export class AppComponent {
       title: 'Timesheet Management',
       img: '../assets/images/timesheet.jpg',
       description:
-        'Test description Test description Test description Test description Test description Test description',
+        'Developed a Timesheet App using React, Node.js, and PostgreSQL to streamline work hour tracking and timesheet management. Features include secure authentication, an intuitive dashboard, and efficient project/task assignment, allowing users to log, edit, and submit timesheets seamlessly.',
       githubLink: '',
       liveDemoLink: '',
     },
@@ -116,7 +114,8 @@ export class AppComponent {
       title: 'Bank Portfolio',
       img: '../assets/images/bank-app-preview.png',
       githubLink: 'https://github.com/Shakeeersk777/Shakeer-Bank',
-      description: 'Test description',
+      description:
+        'Simple portfolio bank website developed using HTML, CSS, and JavaScript.',
       liveDemoLink:
         'https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button',
     },
@@ -124,29 +123,35 @@ export class AppComponent {
       title: 'ATM Management',
       img: '../assets/images/atm.jpg',
       githubLink: 'https://github.com/Shakeeersk777/ATM-Project',
-      description: 'Test description',
-      liveDemoLink:
-        '',
+      description:
+        'Developed using Java, where users can deposit, withdraw, and check balance.',
+      liveDemoLink: '',
     },
   ];
 
   certifications: ICertification[] = [
     {
-      title: 'Angular Developer Certification',
+      title: 'Angular',
       img: '../assets/images/infosys-logo.png',
+      modalImg: '../assets/images/angular-certificaton.jpg',
       link: '',
-      description: 'Test description',
+      description:
+        'From my Angular certification, I have learned core concepts such as building and managing components, utilizing Angular`s reactive programming with RxJS, and implementing data binding and dependency injection for scalable applications. The certification also covered Angular’s module system, routing, and forms, along with best practices for state management and performance optimization. Additionally, I gained experience with Angular’s CLI, testing frameworks, and integration of Angular Material and Bootstrap for professional and responsive UI design.',
     },
     {
-      title: 'Java Programming Certification',
+      title: 'Java Programming',
       img: '../assets/images/infosys-logo.png',
-      description: 'Test description',
+      modalImg: '../assets/images/java-certication.jpg',
+      description:
+        'From my certification, I have learned core Java concepts, including Object-Oriented Programming principles such as Encapsulation, Inheritance, Polymorphism, and Abstraction for creating modular and reusable code. The certification also covered Java Collections Framework, Exception Handling, and Multithreading to efficiently manage data and build robust, concurrent applications. Additionally, I gained knowledge in Java 8 features like lambda expressions and the Stream API, as well as Java I/O and JVM internals for optimizing performance and advanced data processing.',
       link: '',
     },
     {
-      title: 'Digital Marketing Certification',
+      title: 'Digital Marketing',
       img: '../assets/images/google-logo.png',
-      description: 'Test description',
+      modalImg: '../assets/images/google-certificaton.jpg',
+      description:
+        'From my digital marketing certification, I learned key strategies for SEO, SEM, content marketing, and social media management to drive online engagement and growth. The certification also covered data analytics and campaign optimization techniques to measure and enhance marketing performance.',
       link: '',
     },
   ];

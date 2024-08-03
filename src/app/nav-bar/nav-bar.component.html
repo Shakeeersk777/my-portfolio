@@ -2,9 +2,11 @@
   <div class="logo">{{ username }}</div>
   <div>
     <ul class="nav-links">
-      <li *ngFor="let item of navItems">
+      @for (item of navItems; track $index) {
+      <li>
         <a [href]="'#' + item.id">{{ item.label }}</a>
       </li>
+      }
     </ul>
   </div>
 </nav>
@@ -19,13 +21,15 @@
     </div>
     <div class="menu-links">
       <ul>
-        <li *ngFor="let item of navItems">
+        @for (item of navItems; track $index) {
+        <li>
           <a
             [href]="'#' + item.id"
             (click)="scrollToSection(item.id); toggleMenu()"
             >{{ item.label }}</a
           >
         </li>
+        }
       </ul>
     </div>
   </div>

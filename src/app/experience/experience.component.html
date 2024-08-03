@@ -2,14 +2,18 @@
   <p class="intro">Explore My</p>
   <h1 class="title">Experience</h1>
   <div class="experience-info">
-    <div class="experience-category" *ngFor="let exp of experiences">
+    @for (exp of experiences; track $index) {
+    <div class="experience-category">
       <h2 class="sub-title">{{ exp.category }}</h2>
       <div class="skills-list">
-        <div class="skill-box" *ngFor="let skill of exp.skills">
+        @for (skill of exp.skills; track $index) {
+        <div class="skill-box">
           <i [class]="skill.icon"></i>
           <p>{{ skill.name }}</p>
         </div>
+        }
       </div>
     </div>
+    }
   </div>
 </section>

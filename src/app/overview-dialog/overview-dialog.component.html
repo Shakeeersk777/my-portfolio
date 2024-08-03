@@ -1,31 +1,37 @@
-<h1 mat-dialog-title class="modal-title">{{ modalData.title }}</h1>
+<h1 mat-dialog-title class="modal-title border-bottom">
+  {{ modalData.title }}
+</h1>
 
 <div mat-dialog-content class="custom-dialog-content">
   <div class="modal-body-content">
-    <div class="modal-image">
-      <img
-        [src]="modalData.img"
-        class="img img-thumbnail"
-        alt="{{ modalData.title }}"
-      />
-    </div>
     <div class="modal-details">
+      <div class="modal-image">
+        <img
+          [src]="modalData.modalImg ? modalData.modalImg : modalData.img"
+          class="img img-thumbnail m-2"
+          alt="{{ modalData.title }}"
+        />
+      </div>
       <p class="text-muted">{{ modalData.description }}</p>
+
       <div class="modal-buttons">
+        @if (modalData.githubLink) {
         <button
           mat-button
           class="btn btn-primary"
           (click)="openLink(modalData.githubLink)"
         >
-          Github
+          <i class="fab fa-github"></i> Github
         </button>
+        } @if (modalData.demoLink) {
         <button
           mat-button
           class="btn btn-secondary"
           (click)="openLink(modalData.demoLink)"
         >
-          Demo
+          <i class="fas fa-desktop"></i> Demo
         </button>
+        }
       </div>
     </div>
   </div>
@@ -34,4 +40,3 @@
 <div mat-dialog-actions class="d-flex justify-content-end">
   <button mat-button class="btn btn-danger" (click)="onClose()">Close</button>
 </div>
-  

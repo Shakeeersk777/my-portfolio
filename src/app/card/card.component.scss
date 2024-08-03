@@ -1,19 +1,19 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-.certifications-section {
+.container-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
   background: $primary-bg-color;
 
-  .certifications-details {
+  .container-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem; // Increased gap for better spacing
   }
 
-  .certification-box {
+  .container-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
     padding: 1.5rem;
     border: $border;
     border-radius: 8px;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s; // Smooth transition
 
     &:hover {
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -34,14 +34,14 @@
       margin-bottom: 1rem;
     }
 
-    .certification-img {
+    .container-img {
       width: 100%;
       height: 100%;
       object-fit: cover; // Cover the container
       border-radius: 8px;
     }
 
-    .certification-title {
+    .container-title {
       font-size: 1.2rem; // Title size
       margin-bottom: 1rem;
     }
@@ -56,16 +56,16 @@
 
 // Media Queries
 @media (max-width: 768px) {
-  .certifications-details {
+  .container-details {
     flex-direction: column; // Stack items on smaller screens
     align-items: center;
   }
 
-  section {
+  .container-section {
     padding: 2vh 1rem; // Reduced padding for smaller screens
   }
 
-  .certification-box {
+  .container-box {
     width: 100%; // Full width on small screens
     max-width: 300px; // Adjusted max width
   }

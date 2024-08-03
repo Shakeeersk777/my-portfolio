@@ -30,6 +30,7 @@ export interface IProject {
 export interface ICertification {
   title: string;
   img: string;
+  modalImg: string;
   link: string;
   description: string;
 }
