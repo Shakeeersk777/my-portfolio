@@ -1,6 +1,7 @@
 @import "../../common/common";
 @import "../../common/variables";
 
+
 .container-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
@@ -29,27 +30,50 @@
     }
 
     .image-container {
+      position: relative;
       width: 100%;
       height: 200px;
       margin-bottom: 1rem;
-    }
+      overflow: hidden; // Ensures the blur effect doesn't overflow
 
-    .container-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; // Cover the container
-      border-radius: 8px;
+      &:hover .container-img {
+        filter: blur(5px); // Apply blur effect
+        transform: scale(1.05); // Slight zoom effect
+      }
+
+      &:hover .view-btn {
+        opacity: 1; // Show button on hover
+        transform: translate(-50%, -50%) scale(1); // Scale up the button
+      }
+
+      .container-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Cover the container
+        border-radius: 8px;
+        transition: filter 0.3s ease, transform 0.3s ease; // Smooth transition for blur and zoom
+      }
+
+      .view-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8); // Center the button
+        background: rgba(255, 255, 255, 0.9); // Semi-transparent background
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px; // Rounded corners
+        opacity: 0; // Initially hide the button
+        transition: opacity 0.2s ease, transform 0.2s ease; // Smooth transition for button
+        font-size: 1rem; // Adjusted font size
+        color: $primary-text-color; // Use a primary text color
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+        cursor: pointer; // Pointer cursor on hover
+      }
     }
 
     .container-title {
-      font-size: 1.2rem; // Title size
-      margin-bottom: 1rem;
-    }
-
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 1rem; // Space between buttons
+      font-size: 1.3rem; // Title size
     }
   }
 }

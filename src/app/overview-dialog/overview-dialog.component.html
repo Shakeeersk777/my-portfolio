@@ -8,7 +8,7 @@
       <div class="modal-image">
         <img
           [src]="modalData.modalImg ? modalData.modalImg : modalData.img"
-          class="img img-thumbnail m-2"
+          class="img-thumbnail m-2"
           alt="{{ modalData.title }}"
         />
       </div>
@@ -23,11 +23,11 @@
         >
           <i class="fab fa-github"></i> Github
         </button>
-        } @if (modalData.demoLink) {
+        } @if (modalData.liveDemoLink) {
         <button
           mat-button
           class="btn btn-secondary"
-          (click)="openLink(modalData.demoLink)"
+          (click)="openLink(modalData.liveDemoLink)"
         >
           <i class="fas fa-desktop"></i> Demo
         </button>

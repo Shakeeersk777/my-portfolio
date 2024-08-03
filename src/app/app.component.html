@@ -9,10 +9,13 @@
 <app-card
   [cardId]="'certifications'"
   [cardTitle]="'Certifications'"
-  [items]="certifications"
+  [items]="userInfo.certifications"
 />
 
-<app-card [cardId]="'projects'" [cardTitle]="'Projects'" [items]="projects" />
-
+<app-card
+  [cardId]="'projects'"
+  [cardTitle]="'Projects'"
+  [items]="userInfo.projects"
+/>
 
 <app-contact [contacts]="userInfo.contact" />
