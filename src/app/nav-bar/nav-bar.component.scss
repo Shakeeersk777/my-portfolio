@@ -1,4 +1,4 @@
-@import '../../common/variables';
+@import "../../common/variables";
 
 nav,
 .nav-links {
@@ -6,7 +6,7 @@ nav,
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: $primary-bg-color
+  background: $primary-bg-color;
   // position: sticky;
   // top: 0px;
 }
@@ -15,7 +15,6 @@ nav,
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
-  
 }
 
 .desktop-nav .nav-links a {
@@ -63,6 +62,7 @@ nav,
   right: 0;
   background-color: $primary-bg-color;
   width: fit-content;
+
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -75,6 +75,9 @@ nav,
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .menu-links.open {

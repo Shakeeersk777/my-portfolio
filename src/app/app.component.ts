@@ -104,7 +104,7 @@ export class AppComponent {
   projects: IProject[] = [
     {
       title: 'Timesheet Management',
-      img: '../assets/images/timesheet.jpg',
+      img: '../assets/images/timesheet-logo.png',
       description:
         'Developed a Timesheet App using React, Node.js, and PostgreSQL to streamline work hour tracking and timesheet management. Features include secure authentication, an intuitive dashboard, and efficient project/task assignment, allowing users to log, edit, and submit timesheets seamlessly.',
       githubLink: '',
@@ -120,8 +120,8 @@ export class AppComponent {
         'https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button',
     },
     {
-      title: 'ATM Management',
-      img: '../assets/images/atm.jpg',
+      title: 'ATM Management System',
+      img: '../assets/images/atm.png',
       githubLink: 'https://github.com/Shakeeersk777/ATM-Project',
       description:
         'Developed using Java, where users can deposit, withdraw, and check balance.',
@@ -132,7 +132,7 @@ export class AppComponent {
   certifications: ICertification[] = [
     {
       title: 'Angular',
-      img: '../assets/images/infosys-logo.png',
+      img: '../assets/images/angular-logo.jpg',
       modalImg: '../assets/images/angular-certificaton.jpg',
       link: '',
       description:
@@ -140,7 +140,7 @@ export class AppComponent {
     },
     {
       title: 'Java Programming',
-      img: '../assets/images/infosys-logo.png',
+      img: '../assets/images/java-logo.png',
       modalImg: '../assets/images/java-certication.jpg',
       description:
         'From my certification, I have learned core Java concepts, including Object-Oriented Programming principles such as Encapsulation, Inheritance, Polymorphism, and Abstraction for creating modular and reusable code. The certification also covered Java Collections Framework, Exception Handling, and Multithreading to efficiently manage data and build robust, concurrent applications. Additionally, I gained knowledge in Java 8 features like lambda expressions and the Stream API, as well as Java I/O and JVM internals for optimizing performance and advanced data processing.',
@@ -148,7 +148,7 @@ export class AppComponent {
     },
     {
       title: 'Digital Marketing',
-      img: '../assets/images/google-logo.png',
+      img: '../assets/images/digital-marketing-logo.png',
       modalImg: '../assets/images/google-certificaton.jpg',
       description:
         'From my digital marketing certification, I learned key strategies for SEO, SEM, content marketing, and social media management to drive online engagement and growth. The certification also covered data analytics and campaign optimization techniques to measure and enhance marketing performance.',

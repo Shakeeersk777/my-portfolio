@@ -1,6 +1,6 @@
 <section class="container-section" [id]="cardId">
   <p class="intro">Browse My Recent</p>
-  <h1 class="title">{{ cardTitle }}</h1>
+  <p class="title">{{ cardTitle }}</p>
   <div class="container-details">
     @for (item of items; track $index) {
     <div class="container-box">
@@ -11,10 +11,10 @@
           class="img-thumbnail container-img"
         />
         <button class="btn btn-secondary view-btn" (click)="openModal(item)">
-          View
+          <i class="fa-solid fa-eye"></i> View 
         </button>
       </div>
-      <h2 class="container-title">{{ item.title }}</h2>
+      <p class="container-title">{{ item.title }}</p>
     
     </div>
     }

@@ -1,10 +1,10 @@
 <section class="experience-section" id="experience">
   <p class="intro">Explore My</p>
-  <h1 class="title">Experience</h1>
+  <p class="title">Experience</p>
   <div class="experience-info">
     @for (exp of experiences; track $index) {
     <div class="experience-category">
-      <h2 class="sub-title">{{ exp.category }}</h2>
+      <p class="sub-title">{{ exp.category }}</p>
       <div class="skills-list">
         @for (skill of exp.skills; track $index) {
         <div class="skill-box">
