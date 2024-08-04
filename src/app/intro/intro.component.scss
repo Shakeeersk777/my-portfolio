@@ -1,4 +1,4 @@
-@import "../../common/common";
+@import "../../common/variables";
 .profile-section {
   display: flex;
   justify-content: space-evenly;
@@ -12,78 +12,81 @@
     height: auto; // Allow the section to adjust based on content
     align-items: center;
   }
-
-  .pic-container {
-    display: flex;
-    margin: auto 0;
-  
-    img {
-      height: 350px;
-      width: 350px;
-      border-radius: 50%; // Use 50% for a perfect circle
-      object-fit: cover; // Ensure the image covers the container
-    }
-  }
-  
-  .text-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; // Center align the text
-  
-    .name {
-      font-size: 2.5rem;
-      color: #333;
-      font-weight: 500;
-    }
-  
-    .role {
-      font-size: 1.5rem;
-      color: #777;
-      font-weight: 600;
-      margin: 0.5rem 0; // Add space around role
-    }
-  }
-  
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  
-    .btn {
-      font-weight: 600;
-      padding: 1rem;
-      border-radius: 2rem;
-      max-width: 200px; // Limit button width
-      width: 100%; // Full width for smaller screens
-    }
-  }
-  
-  .socials-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-  
-    .icon {
-      cursor: pointer;
-      height: 2rem;
-      font-size: 1.5rem; // Increased icon size for better visibility
-      transition: transform 0.2s;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-  
-  .detail-box {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
 }
 
+.pic-container {
+  display: flex;
+  margin: auto 0;
+
+  img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%; // Use 50% for a perfect circle
+    object-fit: cover; // Ensure the image covers the container
+  }
+}
+
+.text-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center align the text
+
+  .intro {
+    font-weight: 600;
+    margin-bottom: 0.5rem; // Add space below intro
+  }
+
+  .name {
+    font-size: 3rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .role {
+    font-size: 1.5rem;
+    color: #777;
+    font-weight: 600;
+    margin: 0.5rem 0; // Add space around role
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .btn {
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 2rem;
+    max-width: 200px; // Limit button width
+    width: 100%; // Full width for smaller screens
+  }
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+
+  .icon {
+    cursor: pointer;
+    height: 2rem;
+    font-size: 1.5rem; // Increased icon size for better visibility
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.detail-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {
