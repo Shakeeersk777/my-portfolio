@@ -23,13 +23,12 @@
     padding: 1.5rem;
     border: $border;
     border-radius: 12px;
-    transition: box-shadow 0.3s, transform 0.3s; // Added transform for smoother effect
-
+    transition: $transition;
+    box-shadow: $box-shadow;
     &:hover {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transform: translateY(-5px); // Slight lift effect on hover
+      transform: $transition-hover;
+      box-shadow: $box-shadow;
     }
-
     i {
       font-size: 1.3rem; // Adjusted icon size for better visibility
       color: #333; // Icon color

@@ -7,6 +7,9 @@ $intro-m-b: 2rem;
 $title-m-b: 3rem;
 $title-font-weight: 600;
 $border: 1px solid #ddd;
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+$transition: transform 0.3s, box-shadow 0.3s;
+$transition-hover: translateY(-5px);
 
 $primary-bg-color: #f8f9fa;
 $secondary-text-color: #6c757d;
@@ -20,9 +23,6 @@ $btn-text-color: #ffffff;
 $btn-hover-bg: #0056b3;
 $btn-hover-text: #ffffff;
 
-
-
-
 $dark-mode-primary-bg-color: #777;
 $dark-mode-intro-txt-color: #fff;
 $dark-mode-title-txt-color: #333;
@@ -31,4 +31,4 @@ $dark-mode-title-font-size: 3rem;
 $dark-mode-intro-m-t: 1rem;
 $dark-mode-title-m-t: 2rem;
 $dark-mode-title-font-weight: 600;
-$dark-mode-border: 1px solid #ddd
+$dark-mode-border: 1px solid #ddd;

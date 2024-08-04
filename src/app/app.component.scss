@@ -6,3 +6,28 @@ section {
   margin: 0 auto;
   text-align: center; /* Center align section content */
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  section {
+    padding: 4vh 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 4vh 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4vh 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 4vh 2rem;
+  }
+}

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { INavList } from '../../core/user-info.interface';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,20 +11,43 @@ import { Component, Input } from '@angular/core';
 })
 export class NavBarComponent {
   @Input() username: string = '';
-  navItems = [
-    { id: 'about', label: 'About', sectionClass: 'about-section' },
+  navItems: INavList[] = [
+    {
+      id: 'about',
+      label: 'About',
+      sectionClass: 'about-section',
+      display: true,
+    },
     {
       id: 'experience',
       label: 'Experience',
       sectionClass: 'experience-section',
+      display: true,
+    },
+    {
+      id: 'skills',
+      label: 'Skills',
+      sectionClass: 'skills-section',
+      display: true,
     },
     {
       id: 'certifications',
       label: 'Certifications',
       sectionClass: 'certifications-section',
+      display: true,
     },
-    { id: 'projects', label: 'Projects', sectionClass: 'projects-section' },
-    { id: 'contact', label: 'Contact', sectionClass: 'contact-section' },
+    {
+      id: 'projects',
+      label: 'Projects',
+      sectionClass: 'projects-section',
+      display: true,
+    },
+    {
+      id: 'contact',
+      label: 'Contact',
+      sectionClass: 'contact-section',
+      display: true,
+    },
   ];
 
   toggleMenu() {

@@ -21,7 +21,7 @@
     </div>
     <div class="menu-links">
       <ul>
-        @for (item of navItems; track $index) {
+        @for (item of navItems; track $index) { @if (item.display) {
         <li>
           <a
             [href]="'#' + item.id"
@@ -29,7 +29,7 @@
             >{{ item.label }}</a
           >
         </li>
-        }
+        } }
       </ul>
     </div>
   </div>

@@ -1,7 +1,6 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-
 .container-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
@@ -22,11 +21,11 @@
     padding: 1.5rem;
     border: $border;
     border-radius: 8px;
-    transition: box-shadow 0.3s, transform 0.3s; // Smooth transition
-
+    transition: $transition;
+    box-shadow: $box-shadow;
     &:hover {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transform: translateY(-5px); // Slight lift effect on hover
+      transform: $transition-hover;
+      box-shadow: $box-shadow;
     }
 
     .image-container {

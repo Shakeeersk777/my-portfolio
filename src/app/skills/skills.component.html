@@ -1,0 +1,19 @@
+<section class="skill-section" id="skills">
+  <p class="intro">Explore My</p>
+  <p class="title">Technical Skills</p>
+  <div class="skill-info">
+    @for (item of skills; track $index) {
+    <div class="skill-category">
+      <p class="sub-title">{{ item.category }}</p>
+      <div class="skills-list">
+        @for (skill of item.skills; track $index) {
+        <div class="skill-box">
+          <i [class]="skill.icon"></i>
+          <p>{{ skill.name }}</p>
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>

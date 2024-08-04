@@ -14,7 +14,7 @@ export interface ISkill {
   icon: string;
 }
 
-export interface IExperience {
+export interface ISkills {
   category: string;
   skills: ISkill[];
 }
@@ -46,9 +46,43 @@ export interface IUserInfo {
   email: string;
   contact: IContactInfo[];
   role: string;
-  experience: IExperience[];
+  skills: ISkills[];
   projects: IProject[];
   education: IEducation; // Reference to the Education interface
   certifications: ICertification[];
   socialUrls: ISocialUrls;
+  experience: IExperience[];
+}
+
+export interface IExperience {
+  company: string;
+  logo: string;
+  jobTitle: string;
+  location: string;
+  yearsOfExperience: string;
+  skills: string[];
+  projects: string[];
+  dateOfEmployment: string;
+  jobDescription: string;
+}
+
+export interface INavList {
+  id: string;
+  label: string;
+  sectionClass: string;
+  display: boolean;
+}
+
+export interface IUser {
+  username: string;
+  profile: string;
+  email: string;
+  contact: IContactInfo[];
+  role: string;
+  skills: ISkills[];
+  projects: IProject[];
+  education: IEducation;
+  certifications: ICertification[];
+  socialUrls: ISocialUrls;
+  experience: IExperience[];
 }
