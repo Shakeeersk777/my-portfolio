@@ -135,7 +135,7 @@ export const EXPERIENCE: IExperience[] = [
   {
     company: 'Srinsoft Technologies',
     logo: '../assets/images/sst-logo.png',
-    jobTitle: 'Trainee',
+    jobTitle: 'Trainee Software Engineer',
     location: 'Chennai, TN, India',
     yearsOfExperience: calculateExperience(new Date(2023, 5)),
     skills: [
