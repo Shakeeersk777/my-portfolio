@@ -1,5 +1,7 @@
 export interface IEducation {
   degree: string;
+  period: string;
+  score: string;
 }
 
 export interface IContactInfo {

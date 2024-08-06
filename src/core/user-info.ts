@@ -6,11 +6,12 @@ import {
   IExperience,
   IProject,
   ISkills,
-  IUserInfo,
 } from './user-info.interface';
 
 export const EDUCATION: IEducation = {
   degree: 'Bachelor of Technology in Mechanical engineering',
+  period: '2019 - 2022',
+  score: '7.04 CGPA',
 };
 
 export const CONTACT_INFO: IContactInfo[] = [
