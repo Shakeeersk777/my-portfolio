@@ -3,8 +3,35 @@ $primary-color: #007bff;
 $secondary-color: #6c757d;
 $danger-color: #dc3545;
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
 .mat-dialog-container {
   padding: 24px;
+  animation: fadeIn 0.3s ease-out; // Apply fade-in animation on load
+
+  &.fade-out {
+    animation: fadeOut 0.3s ease-in forwards; // Apply fade-out animation on close
+  }
 
   .modal-body-content {
     display: flex;
