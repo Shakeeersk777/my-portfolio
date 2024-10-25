@@ -40,7 +40,7 @@ export function getPortofolioData(): IUserInfo {
     profile: '../assets/images/profile-pic.png',
     email: 'shakeersk777@gmail.com',
     contact: CONTACT_INFO,
-    role: 'Web Developer',
+    role: 'Frontend Developer',
     skills: SKILLS,
     projects: PROJECTS,
     education: EDUCATION,
