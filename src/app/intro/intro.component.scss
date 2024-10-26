@@ -19,8 +19,8 @@
   margin: auto 0;
 
   img {
-    height: 350px;
-    width: 350px;
+    height: 325px;
+    width: 325px;
     border-radius: 50%; // Use 50% for a perfect circle
     object-fit: cover; // Ensure the image covers the container
   }
@@ -32,14 +32,10 @@
   flex-direction: column;
   align-items: center; // Center align the text
 
-  .intro {
-    font-weight: 600;
-  }
-
-  .name {
-    font-size: 3rem;
+  .username {
+    font-size: 2.5rem;
     color: #333;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .role {
