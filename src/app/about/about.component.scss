@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 5rem; // Increased gap for better spacing
+  background: $primary-bg-color;
 
   .detail-box {
     display: flex;
@@ -24,10 +25,11 @@
     }
 
     .secondary-txt {
-      color: black;
+      color: $primary-text-color;
     }
 
     .icon {
+      color: $primary-text-color;
       font-size: 2rem; // Icon size
       margin-bottom: 1rem;
     }
@@ -35,12 +37,12 @@
     h3 {
       font-size: 1.5rem; // Title size
       margin-bottom: 0.5rem;
-      color: #333;
+      color: $primary-text-color;
     }
 
     p {
       font-size: 1rem; // Paragraph size
-      color: #666; // Subtle text color
+      color: $primary-text-color; // Subtle text color
     }
   }
 }

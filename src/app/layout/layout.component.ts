@@ -9,6 +9,7 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { IUserInfo } from '../../core/user-info.interface';
 import { getPortofolioData } from '../../utils/common-functions';
+import { SectionHeadingComponent } from '../section-heading/section-heading.component';
 
 @Component({
   selector: 'app-layout',
@@ -22,12 +23,26 @@ import { getPortofolioData } from '../../utils/common-functions';
     IntroComponent,
     CardComponent,
     SkillsComponent,
+    SectionHeadingComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent implements OnInit {
   userInfo!: IUserInfo;
+  sections = [
+    { id: 'education', intro: 'Explore My', title: 'Education' },
+    { id: 'experience', intro: 'Explore My', title: 'Experience' },
+    { id: 'skills', intro: 'Explore My', title: 'Skills' },
+    {
+      id: 'certifications',
+      intro: 'Browse My Recent',
+      title: 'Certifications',
+    },
+    { id: 'projects', intro: 'Browse My Recent', title: 'Projects' },
+    { id: 'contact', intro: 'Get in Touch', title: 'Contact Me' },
+  ];
+
   ngOnInit(): void {
     this.userInfo = getPortofolioData();
   }

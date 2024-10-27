@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem; // Increased gap for better spacing
+  background: $primary-bg-color;
   .container-box {
     display: flex;
     flex-direction: column;
@@ -58,7 +59,7 @@
         opacity: 0; // Initially hide the button
         transition: opacity 0.2s ease, transform 0.2s ease; // Smooth transition for button
         font-size: 1rem; // Adjusted font size
-        color: $primary-text-color; // Use a primary text color
+        color: #000; // Use a primary text color
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
         cursor: pointer; // Pointer cursor on hover
       }

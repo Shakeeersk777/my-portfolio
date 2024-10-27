@@ -1,43 +1,16 @@
-<app-nav-bar />
+<app-nav-bar></app-nav-bar>
+<app-intro [intro]="userInfo"></app-intro>
 
-<app-intro [intro]="userInfo" />
-
-<section id="education">
-  <p class="intro">Explore My</p>
-  <p class="title">Education</p>
-  <app-about [about]="userInfo" />
-</section>
-
-<section id="experience">
-  <p class="intro">Explore My</p>
-  <p class="title">Experience</p>
-  <app-experience [experiences]="userInfo.experience" />
-</section>
-
-
-<section id="skills">
-  <p class="intro">Explore My</p>
-  <p class="title">Skills</p>
-  <app-skills [skills]="userInfo.skills" />
-</section>
-
-
-<section id="certifications">
-  <p class="intro">Browse My Recent</p>
-  <p class="title">Certifications</p>
-  <app-card [items]="userInfo.certifications"/>
-</section>
-
-
-<section id="projects">
-  <p class="intro">Browse My Recent</p>
-  <p class="title">Projects</p>
-  <app-card [items]="userInfo.projects"/>
-</section>
-
-
-<section id="contact">
-  <p class="intro">Get in Touch</p>
-  <p class="title">Contact Me</p>
-  <app-contact [contacts]="userInfo.contact" />
-</section>
+@for (section of sections; track $index) {
+  <section [id]="section.id">
+    <app-section-heading [introText]="section.intro" [titleText]="section.title"></app-section-heading>
+    <ng-container [ngSwitch]="section.id">
+      <app-about *ngSwitchCase="'education'" [about]="userInfo"></app-about>
+      <app-experience *ngSwitchCase="'experience'" [experiences]="userInfo.experience"></app-experience>
+      <app-skills *ngSwitchCase="'skills'" [skills]="userInfo.skills"></app-skills>
+      <app-card *ngSwitchCase="'certifications'" [items]="userInfo.certifications"></app-card>
+      <app-card *ngSwitchCase="'projects'" [items]="userInfo.projects"></app-card>
+      <app-contact *ngSwitchCase="'contact'" [contacts]="userInfo.contact"></app-contact>
+    </ng-container>
+  </section>
+}

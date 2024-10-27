@@ -7,6 +7,7 @@
   justify-content: center;
   gap: 2rem;
   align-items: center;
+  background: $primary-bg-color;
 
   .contact-item {
     cursor: pointer;
@@ -26,7 +27,7 @@
     }
     i {
       font-size: 1.3rem; // Adjusted icon size for better visibility
-      color: #333; // Icon color
+      color: $primary-text-color; // Icon color
       transition: transform 0.2s; // Smooth icon scaling
 
       &:hover {
@@ -36,7 +37,7 @@
 
     p {
       font-size: 1.2rem; // Adjusted font size for better readability
-      color: #555; // Text color
+      color: $primary-text-color; // Text color
       margin: 0;
     }
   }

@@ -1,0 +1,14 @@
+@import "../../common/variables";
+
+.intro {
+  font-size: $intro-font-size;
+  color: $intro-txt-color;
+  margin-bottom: $intro-m-b;
+}
+
+.title {
+  font-size: $title-font-size;
+  color: $title-txt-color;
+  margin-bottom: $title-m-b;
+  font-weight: $title-font-weight;
+}
