@@ -1,31 +1,27 @@
-<section class="experience-section" id="experience">
-  <p class="intro">Explore My</p>
-  <p class="title">Experience</p>
-  <div class="experience-info" *ngFor="let exp of experiences; let i = index">
-    <div class="card mb-3">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img [src]="exp.logo" class="card-img" alt="{{ exp.company }} logo" />
-        </div>
-        <div class="col">
-          <div class="card-body">
-            <p class="card-title">{{ exp.company }}</p>
-            <p class="card-text"><strong>Title:</strong> {{ exp.jobTitle }}</p>
-            <p class="card-text">
-              <strong>Duration:</strong> {{ exp.dateOfEmployment }}
-            </p>
-            <p class="card-text">
-              <strong>Experience:</strong> {{ exp.yearsOfExperience }}
-            </p>
-            <p class="card-text">
-              <strong>Location:</strong> {{ exp.location }}
-            </p>
-            <!-- <button class="btn btn-primary" (click)="viewDetails(exp)">
-              View
-            </button> -->
-          </div>
+<div class="experience-info" *ngFor="let exp of experiences; let i = index">
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="exp.logo" class="card-img" alt="{{ exp.company }} logo" />
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <p class="card-title">{{ exp.company }}</p>
+          <p class="card-text"><strong>Title:</strong> {{ exp.jobTitle }}</p>
+          <p class="card-text">
+            <strong>Duration:</strong> {{ exp.dateOfEmployment }}
+          </p>
+          <p class="card-text">
+            <strong>Experience:</strong> {{ exp.yearsOfExperience }}
+          </p>
+          <p class="card-text">
+            <strong>Location:</strong> {{ exp.location }}
+          </p>
+          <!-- <button class="btn btn-primary" (click)="viewDetails(exp)">
+            View
+          </button> -->
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

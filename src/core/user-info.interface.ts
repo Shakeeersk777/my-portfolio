@@ -50,6 +50,7 @@ export interface IUserInfo {
   email: string;
   contact: IContactInfo[];
   role: string;
+  currentLocation: string;
   skills: ISkills[];
   projects: IProject[];
   education: IEducation; // Reference to the Education interface
@@ -75,18 +76,4 @@ export interface INavList {
   label: string;
   sectionClass: string;
   display: boolean;
-}
-
-export interface IUser {
-  username: string;
-  profile: string;
-  email: string;
-  contact: IContactInfo[];
-  role: string;
-  skills: ISkills[];
-  projects: IProject[];
-  education: IEducation;
-  certifications: ICertification[];
-  socialUrls: ISocialUrls;
-  experience: IExperience[];
 }

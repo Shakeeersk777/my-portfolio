@@ -10,7 +10,6 @@ import { INavList } from '../../core/user-info.interface';
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
-  @Input() username: string = '';
   navItems: INavList[] = [
     {
       id: 'education',

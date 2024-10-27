@@ -1,17 +1,11 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-.education-section {
-  padding: 4rem 2rem; // Added padding for spacing
-  text-align: center; // Center text
-  background: $primary-bg-color;
-
-  .details-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5rem; // Increased gap for better spacing
-  }
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem; // Increased gap for better spacing
 
   .detail-box {
     display: flex;
@@ -56,10 +50,6 @@
   .details-container {
     flex-direction: column; // Stack items on smaller screens
     align-items: center;
-  }
-
-  section {
-    padding: 2vh 1rem; // Reduced padding for smaller screens
   }
 
   .detail-box {

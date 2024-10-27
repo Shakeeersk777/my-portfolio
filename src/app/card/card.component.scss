@@ -1,18 +1,11 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-.container-section {
-  padding: 4rem 2rem; // Added padding for spacing
-  text-align: center; // Center text
-  background: $primary-bg-color;
-
-  .container-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem; // Increased gap for better spacing
-  }
-
+.container-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; // Increased gap for better spacing
   .container-box {
     display: flex;
     flex-direction: column;

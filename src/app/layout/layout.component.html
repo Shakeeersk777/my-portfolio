@@ -1,23 +1,43 @@
-<app-nav-bar [username]="userInfo.username" />
+<app-nav-bar />
 
 <app-intro [intro]="userInfo" />
 
-<app-about [about]="userInfo" />
+<section id="education">
+  <p class="intro">Explore My</p>
+  <p class="title">Education</p>
+  <app-about [about]="userInfo" />
+</section>
 
-<app-experience [experiences]="userInfo.experience" />
+<section id="experience">
+  <p class="intro">Explore My</p>
+  <p class="title">Experience</p>
+  <app-experience [experiences]="userInfo.experience" />
+</section>
 
-<app-skills [skills]="userInfo.skills" />
 
-<app-card
-  [cardId]="'certifications'"
-  [cardTitle]="'Certifications'"
-  [items]="userInfo.certifications"
-/>
+<section id="skills">
+  <p class="intro">Explore My</p>
+  <p class="title">Skills</p>
+  <app-skills [skills]="userInfo.skills" />
+</section>
 
-<app-card
-  [cardId]="'projects'"
-  [cardTitle]="'Projects'"
-  [items]="userInfo.projects"
-/>
 
-<app-contact [contacts]="userInfo.contact" />
+<section id="certifications">
+  <p class="intro">Browse My Recent</p>
+  <p class="title">Certifications</p>
+  <app-card [items]="userInfo.certifications"/>
+</section>
+
+
+<section id="projects">
+  <p class="intro">Browse My Recent</p>
+  <p class="title">Projects</p>
+  <app-card [items]="userInfo.projects"/>
+</section>
+
+
+<section id="contact">
+  <p class="intro">Get in Touch</p>
+  <p class="title">Contact Me</p>
+  <app-contact [contacts]="userInfo.contact" />
+</section>

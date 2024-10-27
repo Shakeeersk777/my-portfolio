@@ -1,14 +1,10 @@
-<section class="contact-section" id="contact">
-  <p class="intro">Get in Touch</p>
-  <p class="title">Contact Me</p>
-  <div class="contact-info smooth-hover">
-    <div
-      class="contact-item"
-      *ngFor="let contact of contacts"
-      (click)="redirect(contact.url)"
-    >
-      <i [class]="contact.icon"></i>
-      <p>{{ contact.value }}</p>
-    </div>
+<div class="contact-info smooth-hover">
+  <div
+    class="contact-item"
+    *ngFor="let contact of contacts"
+    (click)="redirect(contact.url)"
+  >
+    <i [class]="contact.icon"></i>
+    <p>{{ contact.value }}</p>
   </div>
-</section>
+</div>

@@ -41,6 +41,7 @@ export function getPortofolioData(): IUserInfo {
     email: 'shakeersk777@gmail.com',
     contact: CONTACT_INFO,
     role: 'Frontend Developer',
+    currentLocation: 'Chennai, Tamilnadu, India',
     skills: SKILLS,
     projects: PROJECTS,
     education: EDUCATION,
