@@ -9,7 +9,9 @@ import {
 } from './user-info.interface';
 
 export const EDUCATION: IEducation = {
-  degree: 'Bachelor of Technology in Mechanical engineering',
+  degree: 'Bachelor of Technology',
+  stream: 'Mechanical engineering',
+  college: 'Narayana engineering college, Gudur, AP',
   period: '2019 - 2022',
   score: '7.04 CGPA',
 };

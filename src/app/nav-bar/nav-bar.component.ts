@@ -13,9 +13,9 @@ export class NavBarComponent {
   @Input() username: string = '';
   navItems: INavList[] = [
     {
-      id: 'about',
-      label: 'About',
-      sectionClass: 'about-section',
+      id: 'education',
+      label: 'Education',
+      sectionClass: 'education-section',
       display: true,
     },
     {

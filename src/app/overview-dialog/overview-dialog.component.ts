@@ -22,6 +22,8 @@ export class OverviewDialogComponent {
     this.dialogRef.close();
   }
 
+  onDownload(): void {}
+
   openLink(url: string): void {
     window.open(url, '_blank');
   }

@@ -1,7 +1,7 @@
 @import "../../common/common";
 @import "../../common/variables";
 
-.about-section {
+.education-section {
   padding: 4rem 2rem; // Added padding for spacing
   text-align: center; // Center text
   background: $primary-bg-color;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px; // Fixed width for uniformity
+    width: 500px; // Fixed width for uniformity
     padding: 1.5rem;
     border: $border;
     border-radius: 8px;

@@ -1,6 +1,8 @@
 export interface IEducation {
   degree: string;
+  stream: string;
   period: string;
+  college: string;
   score: string;
 }
 

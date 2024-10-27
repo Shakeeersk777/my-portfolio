@@ -77,12 +77,13 @@ $danger-color: #dc3545;
     }
   }
 
-  .mat-dialog-actions {
-    padding: 20px;
 
-    .btn-danger {
-      background-color: $danger-color;
-      color: #fff; // Text color
-    }
-  }
+}
+
+
+.mat-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
 }
