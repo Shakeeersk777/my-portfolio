@@ -10,28 +10,33 @@ import {
 import { IUserInfo } from '../core/user-info.interface';
 
 /**
- * Calculates the experience based on the joined date and the current date.
- * @param joinedDate - The date when the experience started.
- * @returns The experience in the format "X.Y monthyears".
+ * Calculates the professional experience based on the joined date.
+ * @param joinedDate - The date when the individual joined.
+ * @returns A string representing the experience in years and months.
  */
 export function calculateExperience(joinedDate: Date): string {
   const currentDate = new Date();
   let years = currentDate.getFullYear() - joinedDate.getFullYear();
   let months = currentDate.getMonth() - joinedDate.getMonth();
 
+  // Adjust for negative month difference
   if (months < 0) {
     years -= 1;
     months += 12;
   }
 
-  // Check if the total experience is less than a year
+  // If the experience is less than a year, return in months
   if (years === 0) {
-    return `${months} months`;
+    return `${months} month${months !== 1 ? 's' : ''}`;
   }
 
-  const totalExperience = years + months / 12;
-  
-  return `${totalExperience.toFixed(1)} years`;
+  // Format experience as "X year(s) and Y month(s)"
+  let experience = `${years} year${years !== 1 ? 's' : ''}`;
+  if (months > 0) {
+    experience += ` and ${months} month${months !== 1 ? 's' : ''}`;
+  }
+
+  return experience;
 }
 
 export function getPortofolioData(): IUserInfo {
@@ -40,7 +45,7 @@ export function getPortofolioData(): IUserInfo {
     profile: '../assets/images/profile-pic.png',
     email: 'shakeersk777@gmail.com',
     contact: CONTACT_INFO,
-    role: 'Frontend Developer',
+    role: 'Junior Programmer Analyst',
     currentLocation: 'Chennai, Tamilnadu, India',
     skills: SKILLS,
     projects: PROJECTS,

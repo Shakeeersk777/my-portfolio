@@ -22,11 +22,14 @@
         @for (item of navItems; track $index) {
         @if (item.display) {
         <li>
-          <a
+          <!-- <a
             [href]="'#' + item.id"
             (click)="scrollToSection(item.id); toggleMenu()"
             >{{ item.label }}</a
-          >
+          > -->
+          <a [routerLink]="['/']" [fragment]="item.id" (click)="toggleMenu()">
+            {{ item.label }}
+          </a>
         </li>
         } }
       </ul>

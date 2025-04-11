@@ -58,7 +58,7 @@ export const SKILLS: ISkills[] = [
       { name: 'TypeScript', icon: '' }, // Font Awesome doesn't have a specific TypeScript icon
       { name: 'Node JS', icon: 'fab fa-node-js' },
       // { name: 'Express JS', icon: 'fa-solid fa-server' }, // No specific icon for Express.js
-      // { name: 'Rest API', icon: 'fas fa-cloud' }, // Custom icon for Rest API
+      { name: 'Rest API', icon: 'fas fa-cloud' }, // Custom icon for Rest API
       // { name: 'PostgreSQL', icon: 'fas fa-database' }, // Custom icon for PostgreSQL
       // { name: 'MongoDB', icon: 'fas fa-database' }, // Custom icon for MongoDB
     ],
@@ -66,8 +66,8 @@ export const SKILLS: ISkills[] = [
   {
     category: 'Version Control',
     skills: [
-      { name: 'Git', icon: 'fa-brands fa-git-alt' },
       { name: 'SVN', icon: 'fas fa-code-branch' }, // Custom icon for SVN
+      { name: 'Git', icon: 'fa-brands fa-git-alt' },
     ],
   },
   {
@@ -75,7 +75,6 @@ export const SKILLS: ISkills[] = [
     skills: [
       { name: 'Vercel', icon: 'fas fa-cloud' }, // Custom icon for Vercel
       { name: 'Render', icon: 'fas fa-server' }, // Custom icon for Render
-      { name: 'AWS S3', icon: 'fab fa-aws' },
     ],
   },
 ];
@@ -141,7 +140,7 @@ export const EXPERIENCE: IExperience[] = [
     logo: '../assets/images/sst-logo.png',
     jobTitle: 'Junior Programmer Analyst',
     location: 'Chennai, TN, India',
-    yearsOfExperience: calculateExperience(new Date(2023, 5)),
+    yearsOfExperience: calculateExperience(new Date(2023, 5, 5)),
     skills: [
       'JavaScript',
       'TypeScript',
