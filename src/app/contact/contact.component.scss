@@ -21,29 +21,30 @@
     border-radius: 12px;
     transition: $transition;
     box-shadow: $box-shadow;
+
     &:hover {
       transform: $transition-hover;
       box-shadow: $box-shadow;
     }
+
     i {
-      font-size: 1.3rem; // Adjusted icon size for better visibility
-      color: $primary-text-color; // Icon color
-      transition: transform 0.2s; // Smooth icon scaling
+      font-size: 1.3rem;
+      color: $primary-text-color;
+      transition: transform 0.2s;
 
       &:hover {
-        transform: scale(1.1); // Slight scaling on hover
+        transform: scale(1.1);
       }
     }
 
     p {
-      font-size: 1.2rem; // Adjusted font size for better readability
-      color: $primary-text-color; // Text color
+      font-size: 1rem;
+      color: $primary-text-color;
       margin: 0;
     }
   }
 }
 
-// Media Queries
 @media (max-width: 768px) {
   .contact-info {
     flex-direction: column;
@@ -51,33 +52,25 @@
   }
 
   .contact-item {
-    width: 100%; // Full width on small screens
-    max-width: 350px; // Adjusted max width
+    width: 100%;
+    max-width: 350px;
 
     p {
-      font-size: 1rem; // Adjusted font size for smaller screens
+      font-size: 1rem;
     }
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 2.5rem; // Adjusted title size for very small screens
-  }
-
-  .intro {
-    font-size: 1.25rem; // Adjusted intro size for very small screens
-  }
-
   .contact-item {
-    padding: 1rem; // Reduced padding for very small screens
+    padding: 1rem;
 
     i {
-      font-size: 1.2rem; // Adjusted icon size for very small screens
+      font-size: 1.2rem;
     }
 
     p {
-      font-size: 0.9rem; // Adjusted font size for very small screens
+      font-size: 0.9rem;
     }
   }
 }

@@ -5,7 +5,10 @@
   <div class="text-container">
     <p class="username">{{ intro.username }}</p>
     <p class="role">{{ intro.role }}</p>
-    <div class="location"><i class="fa-solid fa-location-arrow"></i> <span> {{intro.currentLocation}}</span></div>
+    <div class="location">
+      <i class="fa-solid fa-location-arrow"></i>
+      <span> {{ intro.currentLocation }}</span>
+    </div>
     <!-- <div class="btn-container m-3">
       <button
         class="btn btn-secondary"
@@ -16,12 +19,20 @@
     </div> -->
     <div class="socials-container">
       <i
+        class="icon fa-solid fa-phone"
+        (click)="redirect(intro.socialUrls.MOBILE)"
+      ></i>
+      <i
+        class="icon fa-solid fa-envelope"
+        (click)="redirect(intro.socialUrls.MAIL)"
+      ></i>
+      <i
         class="icon fa-brands fa-github"
-        (click)="redirect(intro.socialUrls.github)"
+        (click)="redirect(intro.socialUrls.GITHUB)"
       ></i>
       <i
         class="icon fa-brands fa-linkedin"
-        (click)="redirect(intro.socialUrls.linkedIn)"
+        (click)="redirect(intro.socialUrls.LINKEDIN)"
       ></i>
     </div>
   </div>

@@ -8,6 +8,20 @@ import {
   ISkills,
 } from './user-info.interface';
 
+export const SOCIAL_URLS = {
+  GITHUB: 'https://github.com/Shakeeersk777',
+  LINKEDIN: 'https://www.linkedin.com/in/shakeer-shaik-58125422a/',
+  MOBILE: 'tel:+919553259698',
+  MAIL: 'mailto:shakeersk777@gmail.com'
+};
+
+export const FONT_ICONS = {
+  GITHUB: 'fa-git-alt',
+  LINKEDIN: 'fa-brands fa-linkedin',
+  MOBILE: 'fa-solid fa-phone',
+  MAIL: 'fa-solid fa-envelope'
+};
+
 export const EDUCATION: IEducation = {
   degree: 'Bachelor of Technology',
   stream: 'Mechanical engineering',
@@ -20,20 +34,20 @@ export const CONTACT_INFO: IContactInfo[] = [
   {
     key: 'Mobile',
     value: '+91 9553259698',
-    icon: 'fa-solid fa-phone',
-    url: 'tel:+919553259698',
+    icon: FONT_ICONS.MOBILE,
+    url: SOCIAL_URLS.MOBILE,
   },
   {
     key: 'Email',
     value: 'shakeersk777@gmail.com',
-    icon: 'fa-solid fa-envelope',
-    url: 'mailto:shakeersk777@gmail.com',
+    icon: FONT_ICONS.MAIL,
+    url: SOCIAL_URLS.MAIL,
   },
   {
     key: 'Linked In',
     value: 'Shakeer Shaik',
-    icon: 'fa-brands fa-linkedin',
-    url: 'https://www.linkedin.com/in/shakeer-shaik-58125422a/',
+    icon: FONT_ICONS.LINKEDIN,
+    url: SOCIAL_URLS.LINKEDIN,
   },
 ];
 
@@ -155,7 +169,3 @@ export const EXPERIENCE: IExperience[] = [
   },
 ];
 
-export const SOCIAL_URLS = {
-  github: 'https://github.com/Shakeeersk777',
-  linkedIn: 'https://www.linkedin.com/in/shakeer-shaik-58125422a/',
-};

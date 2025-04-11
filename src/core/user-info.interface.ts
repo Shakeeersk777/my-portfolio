@@ -40,8 +40,10 @@ export interface ICertification {
 }
 
 export interface ISocialUrls {
-  linkedIn: string;
-  github: string;
+  LINKEDIN: string;
+  GITHUB: string;
+  MOBILE: string;
+  MAIL: string;
 }
 
 export interface IUserInfo {
