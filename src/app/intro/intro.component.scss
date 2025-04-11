@@ -64,13 +64,13 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    gap: 1rem;
+    gap: 1.2rem;
 
     .icon {
       color: $primary-text-color;
       cursor: pointer;
       height: 2rem;
-      font-size: 1.5rem; // Increased icon size for better visibility
+      font-size: 1.4rem; // Increased icon size for better visibility
       transition: transform 0.2s;
 
       &:hover {
