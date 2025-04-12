@@ -75,6 +75,7 @@ export interface IExperience {
   projects: string[];
   dateOfEmployment: string;
   jobDescription: string;
+  joiningDate: string;
 }
 
 export interface INavList {

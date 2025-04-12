@@ -12,7 +12,7 @@
             <strong>Duration:</strong> {{ exp.dateOfEmployment }}
           </p>
           <p class="card-text">
-            <strong>Experience:</strong> {{ exp.yearsOfExperience }}
+            <strong>Experience:</strong> {{ calculateExperience(exp.joiningDate) }}
           </p>
           <p class="card-text">
             <strong>Location:</strong> {{ exp.location }}
