@@ -1,0 +1,39 @@
+<div class="profile-section" id="profile">
+  <div class="pic-container">
+    <img [src]="intro.profile" alt="Profile Picture" class="img-thumbnail" />
+  </div>
+  <div class="text-container">
+    <p class="username">{{ intro.username }}</p>
+    <p class="role">{{ intro.role }}</p>
+    <div class="location">
+      <i class="fa-solid fa-location-arrow"></i>
+      <span> {{ intro.currentLocation }}</span>
+    </div>
+    <!-- <div class="btn-container m-3">
+      <button
+        class="btn btn-secondary"
+        (click)="openDemo('./assets/resume-example.pdf')"
+      >
+        Download Resume
+      </button>
+    </div> -->
+    <div class="socials-container">
+      <i
+        class="icon fa-solid fa-phone"
+        (click)="redirect(socialUrls.phone)"
+      ></i>
+      <i
+        class="icon fa-solid fa-envelope"
+        (click)="redirect(socialUrls.mail)"
+      ></i>
+      <i
+        class="icon fa-brands fa-github"
+        (click)="redirect(socialUrls.github)"
+      ></i>
+      <i
+        class="icon fa-brands fa-linkedin"
+        (click)="redirect(socialUrls.linkedin)"
+      ></i>
+    </div>
+  </div>
+</div>

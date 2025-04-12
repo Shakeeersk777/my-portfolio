@@ -1,0 +1,32 @@
+<nav class="desktop-nav">
+  <div>
+    <ul class="nav-links">
+      @for (item of navItems; track $index) {
+      <li>
+        <a [href]="'#' + item.id">{{ item.label }}</a>
+      </li>
+      }
+    </ul>
+  </div>
+</nav>
+
+<nav class="hamburger-nav">
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-links">
+      <ul>
+        @for (item of navItems; track $index) { @if (item.display) {
+        <li>
+          <a [routerLink]="['/']" [fragment]="item.id" (click)="toggleMenu()">
+            {{ item.label }}
+          </a>
+        </li>
+        } }
+      </ul>
+    </div>
+  </div>
+</nav>

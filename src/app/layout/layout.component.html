@@ -1,16 +1,55 @@
 <app-nav-bar></app-nav-bar>
-<app-intro [intro]="userInfo"></app-intro>
 
-@for (section of sections; track $index) {
+<ng-template [ngIf]="userInfo" [ngIfElse]="loader">
+  <app-intro
+    [intro]="userInfo.intro"
+    [socialUrls]="userInfo.socialUrls"
+  ></app-intro>
+  @for (section of sections; track $index) {
   <section [id]="section.id">
-    <app-section-heading [introText]="section.intro" [titleText]="section.title"></app-section-heading>
+    <app-section-heading
+      [introText]="section.intro"
+      [titleText]="section.title"
+    ></app-section-heading>
     <ng-container [ngSwitch]="section.id">
-      <app-about *ngSwitchCase="'education'" [about]="userInfo"></app-about>
-      <app-experience *ngSwitchCase="'experience'" [experiences]="userInfo.experience"></app-experience>
-      <app-skills *ngSwitchCase="'skills'" [skills]="userInfo.skills"></app-skills>
-      <app-card *ngSwitchCase="'certifications'" [items]="userInfo.certifications"></app-card>
-      <app-card *ngSwitchCase="'projects'" [items]="userInfo.projects"></app-card>
-      <app-contact *ngSwitchCase="'contact'" [contacts]="userInfo.contact"></app-contact>
+      <app-education
+        *ngSwitchCase="'education'"
+        [about]="userInfo"
+      ></app-education>
+      <app-experience
+        *ngSwitchCase="'experience'"
+        [experiences]="userInfo.experience"
+      ></app-experience>
+      <app-skills
+        *ngSwitchCase="'skills'"
+        [skills]="userInfo.skills"
+      ></app-skills>
+      <app-card
+        *ngSwitchCase="'certifications'"
+        [items]="userInfo.certifications"
+      ></app-card>
+      <app-card
+        *ngSwitchCase="'projects'"
+        [items]="userInfo.projects"
+      ></app-card>
+      <app-contact
+        *ngSwitchCase="'contact'"
+        [contacts]="userInfo.contact"
+      ></app-contact>
     </ng-container>
   </section>
-}
+  }
+</ng-template>
+
+<ng-template #loader>
+  <ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.3)"
+    size="medium"
+    color="#007bff"
+    [type]="loaderType"
+  >
+    <p style="font-size: 18px; color: #ffffff; margin-top: 20px">
+      Loading, please wait...
+    </p>
+  </ngx-spinner>
+</ng-template>

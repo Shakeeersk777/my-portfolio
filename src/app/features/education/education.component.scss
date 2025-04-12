@@ -1,0 +1,61 @@
+@import "../../../styles/common";
+@import "../../../styles/variables";
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem; // Increased gap for better spacing
+  background: $primary-bg-color;
+
+  .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px; // Fixed width for uniformity
+    padding: 1.5rem;
+    border: $border;
+    border-radius: 8px;
+    text-align: center;
+    transition: $transition;
+    box-shadow: $box-shadow;
+    &:hover {
+      transform: $transition-hover;
+      box-shadow: $box-shadow;
+    }
+
+    .secondary-txt {
+      color: $primary-text-color;
+    }
+
+    .icon {
+      color: $primary-text-color;
+      font-size: 2rem; // Icon size
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem; // Title size
+      margin-bottom: 0.5rem;
+      color: $primary-text-color;
+    }
+
+    p {
+      font-size: 1rem; // Paragraph size
+      color: $primary-text-color; // Subtle text color
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column; // Stack items on smaller screens
+    align-items: center;
+  }
+
+  .detail-box {
+    width: 100%; // Full width on small screens
+    max-width: 300px; // Adjusted max width
+  }
+}
