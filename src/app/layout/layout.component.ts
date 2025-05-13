@@ -44,13 +44,10 @@ export class LayoutComponent implements OnInit {
   constructor(private spinner: NgxSpinnerService) {}
 
   getPortfolioData() {
-    this._spinnerService.show();
+    // this._spinnerService.show();
 
     const onSuccess = (res: IUserInfo) => {
-      setTimeout(() => {
-        this._spinnerService.hide();
-        this.userInfo = res;
-      }, 2000);
+     this.userInfo = res;
     };
 
     const onError = (error: any) => {

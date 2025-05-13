@@ -2,7 +2,7 @@
   "intro": {
     "username": "Shakeer Shaik",
     "profile": "../assets/images/profile-pic.png",
-    "email": "shakeersk777@gmail.com",
+    "email": "shakeershaik0712@gmail.com",
     "role": "Junior Programmer Analyst",
     "currentLocation": "Chennai, Tamilnadu, India"
   },
@@ -71,6 +71,10 @@
         {
           "name": "Git",
           "icon": "fa-brands fa-git-alt"
+        },
+          {
+          "name": "Bitbucket",
+          "icon": "fa-brands fa-bitbucket"
         }
       ]
     },
@@ -92,9 +96,9 @@
     {
       "title": "Timesheet Management",
       "img": "../assets/images/timesheet-logo.png",
-      "description": "Developed a Timesheet App using React, Node.js, and PostgreSQL to streamline work hour tracking and timesheet management. Features include secure authentication, an intuitive dashboard, and efficient project/task assignment, allowing users to log, edit, and submit timesheets seamlessly.",
+      "description": "Developed a Timesheet App using Angular, Node.js, and PostgreSQL to streamline work hour tracking and timesheet management. Features include secure authentication, an intuitive dashboard, and efficient project/task assignment, allowing users to log, edit, and submit timesheets seamlessly.",
       "githubLink": "",
-      "liveDemoLink": ""
+      "liveDemoLink": "https://shakeer-timesheet.vercel.app/app"
     },
     {
       "title": "Bank Portfolio",
@@ -171,9 +175,9 @@
     },
     {
       "key": "Email",
-      "value": "shakeersk777@gmail.com",
+      "value": "shakeershaik0712@gmail.com",
       "icon": "fa-solid fa-envelope",
-      "url": "mailto:shakeersk777@gmail.com"
+      "url": "mailto:shakeershaik0712@gmail.com"
     },
     {
       "key": "Linked In",
@@ -186,6 +190,6 @@
     "github": "https://github.com/Shakeeersk777",
     "linkedin": "https://www.linkedin.com/in/shakeer-shaik-58125422a/",
     "phone": "tel:+919553259698",
-    "mail": "mailto:shakeersk777@gmail.com"
+    "mail": "mailto:shakeershaik0712@gmail.com"
   }
 }
