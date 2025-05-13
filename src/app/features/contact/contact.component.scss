@@ -16,16 +16,11 @@
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
     border: $border;
     border-radius: 12px;
     transition: $transition;
     box-shadow: $box-shadow;
-
-    &:hover {
-      transform: $transition-hover;
-      box-shadow: $box-shadow;
-    }
 
     i {
       font-size: 1.3rem;
@@ -36,41 +31,13 @@
         transform: scale(1.1);
       }
     }
-
-    p {
-      font-size: 1rem;
-      color: $primary-text-color;
-      margin: 0;
-    }
   }
 }
 
 @media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-item {
-    width: 100%;
-    max-width: 350px;
-
-    p {
-      font-size: 1rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-item {
-    padding: 1rem;
-
+ .contact-item {
     i {
-      font-size: 0.8rem;
-    }
-
-    p {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 }
