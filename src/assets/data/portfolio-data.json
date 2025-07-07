@@ -2,7 +2,7 @@
   "intro": {
     "username": "Shakeer Shaik",
     "profile": "../assets/images/profile-pic.png",
-    "email": " shakeersk777@gmail.com",
+    "email": "shaikshakeer1207@gmail.com",
     "role": "Junior Programmer Analyst",
     "currentLocation": "Chennai, Tamilnadu, India"
   },
@@ -99,20 +99,6 @@
       "description": "Designed and developed a full-stack Timesheet Management System using Angular 18 and Node.js. It supports secure, role-based access and efficient time tracking for Admin and User roles, utilizing Angular AuthGuards and HTTP Interceptors for access control. The system features state management with NgRx, lazy-loaded modules, and reusable SCSS-styled components for optimized performance.",
       "githubLink": "",
       "liveDemoLink": "https://shakeer-timesheet.vercel.app/app"
-    },
-    {
-      "title": "Bank Portfolio",
-      "img": "../assets/images/bank-app-preview.png",
-      "githubLink": "https://github.com/Shakeeersk777/Shakeer-Bank",
-      "description": "Simple portfolio bank website developed using HTML, CSS, and JavaScript.",
-      "liveDemoLink": "https://shakeeersk777.github.io/Shakeer-Bank/?trk=public_profile_project-button"
-    },
-    {
-      "title": "ATM Management System",
-      "img": "../assets/images/atm.png",
-      "githubLink": "https://github.com/Shakeeersk777/ATM-Project",
-      "description": "Developed using Java, where users can deposit, withdraw, and check balance.",
-      "liveDemoLink": ""
     }
   ],
   "education": {
@@ -129,20 +115,6 @@
       "modalImg": "../assets/images/angular-certificaton.jpg",
       "link": "",
       "description": "From my Angular certification, I have learned core concepts such as building and managing components, utilizing Angular`s reactive programming with RxJS, and implementing data binding and dependency injection for scalable applications. The certification also covered Angular\u2019s module system, routing, and forms, along with best practices for state management and performance optimization. Additionally, I gained experience with Angular\u2019s CLI, testing frameworks, and integration of Angular Material and Bootstrap for professional and responsive UI design."
-    },
-    {
-      "title": "Java Programming",
-      "img": "../assets/images/java-logo.png",
-      "modalImg": "../assets/images/java-certication.jpg",
-      "link": "",
-      "description": "From my certification, I have learned core Java concepts, including Object-Oriented Programming principles such as Encapsulation, Inheritance, Polymorphism, and Abstraction for creating modular and reusable code. The certification also covered Java Collections Framework, Exception Handling, and Multithreading to efficiently manage data and build robust, concurrent applications. Additionally, I gained knowledge in Java 8 features like lambda expressions and the Stream API, as well as Java I/O and JVM internals for optimizing performance and advanced data processing."
-    },
-    {
-      "title": "Digital Marketing",
-      "img": "../assets/images/digital-marketing-logo.png",
-      "modalImg": "../assets/images/google-certificaton.jpg",
-      "link": "",
-      "description": "From my digital marketing certification, I learned key strategies for SEO, SEM, content marketing, and social media management to drive online engagement and growth. The certification also covered data analytics and campaign optimization techniques to measure and enhance marketing performance."
     }
   ],
   "experience": [
@@ -175,9 +147,9 @@
     },
     {
       "key": "Email",
-      "value": " shakeersk777@gmail.com",
+      "value": " shaikshakeer1207@gmail.com",
       "icon": "fa-solid fa-envelope",
-      "url": "mailto: shakeersk777@gmail.com"
+      "url": "mailto: shaikshakeer1207@gmail.com"
     },
     {
       "key": "Linked In",
@@ -190,6 +162,6 @@
     "github": "https://github.com/Shakeeersk777",
     "linkedin": "https://www.linkedin.com/in/shakeer-shaik-58125422a/",
     "phone": "tel:+919553259698",
-    "mail": "mailto: shakeersk777@gmail.com"
+    "mail": "mailto: shaikshakeer1207@gmail.com"
   }
 }
