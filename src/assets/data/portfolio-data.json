@@ -115,6 +115,13 @@
       "modalImg": "../assets/images/angular-certificaton.jpg",
       "link": "",
       "description": "From my Angular certification, I have learned core concepts such as building and managing components, utilizing Angular`s reactive programming with RxJS, and implementing data binding and dependency injection for scalable applications. The certification also covered Angular\u2019s module system, routing, and forms, along with best practices for state management and performance optimization. Additionally, I gained experience with Angular\u2019s CLI, testing frameworks, and integration of Angular Material and Bootstrap for professional and responsive UI design."
+    },
+    {
+      "title": "Digital Marketing",
+      "img": "../assets/images/digital-marketing-logo.png",
+      "modalImg": "../assets/images/google-certificaton.jpg",
+      "link": "",
+      "description": "From my digital marketing certification, I learned key strategies for SEO, SEM, content marketing, and social media management to drive online engagement and growth. The certification also covered data analytics and campaign optimization techniques to measure and enhance marketing performance."
     }
   ],
   "experience": [
