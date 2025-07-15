@@ -1,31 +1,44 @@
+<!-- Desktop Navigation -->
 <nav class="desktop-nav">
-  <div>
-    <ul class="nav-links">
-      @for (item of navItems; track $index) {
-      <li>
-        <a [href]="'#' + item.id">{{ item.label }}</a>
-      </li>
+  <ul class="nav-left">
+    <li class="username">Shakeer Shaik</li>
+  </ul>
+
+  <ul class="nav-right">
+    @for (item of navItems; track $index) {
+      @if (item.display) {
+        <li>
+          <a [href]="'#' + item.id">{{ item.label }}</a>
+        </li>
       }
-    </ul>
-  </div>
+    }
+  </ul>
 </nav>
 
+<!-- Hamburger Navigation (Mobile) -->
 <nav class="hamburger-nav">
   <div class="hamburger-menu">
-    <div class="hamburger-icon" (click)="toggleMenu()">
+    <div class="hamburger-icon" (click)="toggleMenu()" [class.open]="menuOpen">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <div class="menu-links">
+
+    <div class="menu-links" [class.open]="menuOpen">
       <ul>
-        @for (item of navItems; track $index) { @if (item.display) {
-        <li>
-          <a [routerLink]="['/']" [fragment]="item.id" (click)="toggleMenu()">
-            {{ item.label }}
-          </a>
-        </li>
-        } }
+        @for (item of navItems; track $index) {
+          @if (item.display) {
+            <li>
+              <a
+                [routerLink]="['/']"
+                [fragment]="item.id"
+                (click)="toggleMenu()"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        }
       </ul>
     </div>
   </div>

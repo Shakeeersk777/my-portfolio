@@ -5,7 +5,7 @@
     [intro]="userInfo.intro"
     [socialUrls]="userInfo.socialUrls"
   ></app-intro>
-  @for (section of sections; track $index) {
+  @for (section of sections; track $index) { @if (section.display) {
   <section [id]="section.id">
     <app-section-heading
       [introText]="section.intro"
@@ -38,7 +38,7 @@
       ></app-contact>
     </ng-container>
   </section>
-  }
+  } }
 </ng-template>
 
 <ng-template #loader>

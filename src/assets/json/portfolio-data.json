@@ -3,7 +3,7 @@
     "username": "Shakeer Shaik",
     "profile": "../assets/images/profile-pic.png",
     "email": "shaikshakeer1207@gmail.com",
-    "role": "Junior Programmer Analyst",
+    "role": "Frontend Web Developer",
     "currentLocation": "Chennai, Tamilnadu, India"
   },
   "skills": [
@@ -29,6 +29,10 @@
         {
           "name": "Angular",
           "icon": "fab fa-angular"
+        },
+        {
+          "name": "React.js",
+          "icon": "fab fa-react"
         },
         {
           "name": "Chart.js",

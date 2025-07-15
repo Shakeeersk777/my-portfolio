@@ -47,19 +47,19 @@ export interface ISocialUrls {
 }
 
 export interface IUserInfo {
-  intro: IIntro,
+  intro: IIntro;
   skills: ISkills[];
   projects: IProject[];
   education: IEducation; // Reference to the Education interface
   certifications: ICertification[];
   socialUrls: ISocialUrls;
   experience: IExperience[];
-  contact: IContactInfo[]
+  contact: IContactInfo[];
 }
 
 export interface IIntro {
   username: string;
-  profile: string; 
+  profile: string;
   email: string;
   role: string;
   currentLocation: string;
@@ -87,6 +87,7 @@ export interface INavList {
 
 export interface ISectionList {
   id: string;
-  intro: string;
   title: string;
+  intro: string;
+  display: boolean;
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import { INavList } from '../../core/models/user-info.interface';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NAV_LIST } from '../../core/constants/app-constants';
@@ -13,37 +13,51 @@ import { NAV_LIST } from '../../core/constants/app-constants';
 })
 export class NavBarComponent implements OnInit {
   navItems: INavList[] = NAV_LIST;
-  constructor(private route: ActivatedRoute) {}
-  
+  menuOpen = false;
+
+  constructor(private route: ActivatedRoute, private renderer: Renderer2) {}
+
   ngOnInit(): void {
-     // Listen to fragment changes
-     this.route.fragment.subscribe(fragment => {
+    // Scroll to fragment on load or route change
+    this.route.fragment.subscribe(fragment => {
       if (fragment) {
         this.scrollToSection(fragment);
       }
     });
   }
 
-  toggleMenu() {
-    const hamburgerIcon = document.querySelector(
-      '.hamburger-icon'
-    ) as HTMLElement;
-    const menuLinks = document.querySelector('.menu-links') as HTMLElement;
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
 
-    hamburgerIcon.classList.toggle('open');
-    menuLinks.classList.toggle('open');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const menuLinks = document.querySelector('.menu-links');
+
+    if (hamburgerIcon && menuLinks) {
+      if (this.menuOpen) {
+        hamburgerIcon.classList.add('open');
+        menuLinks.classList.add('open');
+      } else {
+        hamburgerIcon.classList.remove('open');
+        menuLinks.classList.remove('open');
+      }
+    }
   }
 
-  scrollToSection(id: string) {
+  scrollToSection(id: string): void {
     const section = document.getElementById(id);
     if (section) {
-      const offset = 70; // Adjust for fixed headers
-      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      const offset = 70; // height of sticky navbar
+      const y = section.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
-        top: sectionPosition - offset,
-        behavior: 'smooth'
+        top: y,
+        behavior: 'smooth',
       });
+
+      // Close the menu on mobile after clicking
+      if (this.menuOpen) {
+        this.toggleMenu();
+      }
     }
   }
 }

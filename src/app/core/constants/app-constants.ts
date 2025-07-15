@@ -3,16 +3,22 @@ import { INavList, ISectionList } from '../models/user-info.interface';
 export const NGX_LOADER_TYPE = 'ball-clip-rotate-multiple';
 
 export const SECTION_LIST: ISectionList[] = [
-  { id: 'education', intro: 'Explore My', title: 'Education' },
-  { id: 'experience', intro: 'Explore My', title: 'Experience' },
-  { id: 'skills', intro: 'Explore My', title: 'Skills' },
+  { id: 'education', intro: 'Explore My', title: 'Education', display: true },
+  { id: 'experience', intro: 'Explore My', title: 'Experience', display: true },
+  { id: 'skills', intro: 'Explore My', title: 'Skills', display: true },
   {
     id: 'certifications',
     intro: 'Browse My Recent',
     title: 'Certifications',
+    display: true,
   },
-  { id: 'projects', intro: 'Browse My Recent', title: 'Projects' },
-  { id: 'contact', intro: 'Get in Touch', title: 'Contact Me' },
+  {
+    id: 'projects',
+    intro: 'Browse My Recent',
+    title: 'Projects',
+    display: true,
+  },
+  { id: 'contact', intro: 'Get in Touch', title: 'Contact Me', display: false },
 ];
 
 export const NAV_LIST: INavList[] = [
@@ -50,7 +56,6 @@ export const NAV_LIST: INavList[] = [
     id: 'contact',
     label: 'Contact',
     sectionClass: 'contact-section',
-    display: true,
+    display: false,
   },
 ];
-

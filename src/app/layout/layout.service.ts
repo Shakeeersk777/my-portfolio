@@ -11,7 +11,7 @@ export class LayoutService {
   _httpClient: HttpClient = inject(HttpClient); 
 
   getPortfolioData(): Observable<IUserInfo> {
-    return this._httpClient.get<IUserInfo>('assets/data/portfolio-data.json');
+    return this._httpClient.get<IUserInfo>('assets/json/portfolio-data.json');
   }
 
 }
