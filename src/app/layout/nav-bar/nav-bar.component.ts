@@ -1,5 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { INavList } from '../../core/models/user-info.interface';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NAV_LIST } from '../../core/constants/app-constants';
@@ -14,16 +21,21 @@ import { NAV_LIST } from '../../core/constants/app-constants';
 export class NavBarComponent implements OnInit {
   navItems: INavList[] = NAV_LIST;
   menuOpen = false;
+  activeFragment: string = '';
 
-  constructor(private route: ActivatedRoute, private renderer: Renderer2) {}
+  constructor(
+    private route: ActivatedRoute,
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
-    // Scroll to fragment on load or route change
-    this.route.fragment.subscribe(fragment => {
-      if (fragment) {
-        this.scrollToSection(fragment);
-      }
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener(
+        'scroll',
+        this.updateActiveFragmentOnScroll.bind(this)
+      );
+    }
   }
 
   toggleMenu(): void {
@@ -43,20 +55,39 @@ export class NavBarComponent implements OnInit {
     }
   }
 
+  onNavClick(event: Event, id: string): void {
+    event.preventDefault(); // Prevent default jump/flicker
+    this.scrollToSection(id);
+  }
+
   scrollToSection(id: string): void {
-    const section = document.getElementById(id);
-    if (section) {
-      const offset = 70; // height of sticky navbar
-      const y = section.getBoundingClientRect().top + window.scrollY - offset;
+    if (isPlatformBrowser(this.platformId)) {
+      const section = document.getElementById(id);
+      if (section) {
+        const offset = 70;
+        const y = section.getBoundingClientRect().top + window.scrollY - offset;
 
-      window.scrollTo({
-        top: y,
-        behavior: 'smooth',
-      });
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth',
+        });
 
-      // Close the menu on mobile after clicking
-      if (this.menuOpen) {
-        this.toggleMenu();
+        if (this.menuOpen) {
+          this.toggleMenu();
+        }
+      }
+    }
+  }
+
+  updateActiveFragmentOnScroll(): void {
+    for (const item of this.navItems) {
+      const section = document.getElementById(item.id);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 80 && rect.bottom >= 80) {
+          this.activeFragment = item.id;
+          break;
+        }
       }
     }
   }

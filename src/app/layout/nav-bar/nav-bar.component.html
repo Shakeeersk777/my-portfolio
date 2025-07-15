@@ -5,18 +5,22 @@
   </ul>
 
   <ul class="nav-right">
-    @for (item of navItems; track $index) {
-      @if (item.display) {
-        <li>
-          <a [href]="'#' + item.id">{{ item.label }}</a>
-        </li>
-      }
-    }
+    @for (item of navItems; track $index) { @if (item.display) {
+    <li [class.active]="activeFragment === item.id">
+      <a href="#" (click)="onNavClick($event, item.id)">
+        {{ item.label }}
+      </a>
+    </li>
+    } }
   </ul>
 </nav>
 
 <!-- Hamburger Navigation (Mobile) -->
 <nav class="hamburger-nav">
+  <ul class="nav-left">
+    <li class="username">Shakeer Shaik</li>
+  </ul>
+
   <div class="hamburger-menu">
     <div class="hamburger-icon" (click)="toggleMenu()" [class.open]="menuOpen">
       <span></span>
@@ -26,19 +30,13 @@
 
     <div class="menu-links" [class.open]="menuOpen">
       <ul>
-        @for (item of navItems; track $index) {
-          @if (item.display) {
-            <li>
-              <a
-                [routerLink]="['/']"
-                [fragment]="item.id"
-                (click)="toggleMenu()"
-              >
-                {{ item.label }}
-              </a>
-            </li>
-          }
-        }
+        @for (item of navItems; track $index) { @if (item.display) {
+        <li [class.active]="activeFragment === item.id">
+          <a href="#" (click)="onNavClick($event, item.id)">
+            {{ item.label }}
+          </a>
+        </li>
+        } }
       </ul>
     </div>
   </div>

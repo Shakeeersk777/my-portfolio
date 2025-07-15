@@ -7,10 +7,11 @@
   justify-content: center;
   gap: 2rem;
   align-items: flex-start; // Adjusted to align items at the top
-  background: $primary-bg-color;
+  background: $main-content-bg-color;
 }
 
 .skill-category {
+  background: $primary-bg-color;
   border-radius: 12px;
   border: $border;
   padding: 2rem;

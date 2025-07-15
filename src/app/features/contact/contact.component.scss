@@ -7,12 +7,12 @@
   justify-content: center;
   gap: 2rem;
   align-items: center;
-  background: $primary-bg-color;
+  background: $main-content-bg-color;
 
   .contact-item {
+    background: $primary-bg-color;
     cursor: pointer;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 1rem;
     justify-content: center;
@@ -35,7 +35,7 @@
 }
 
 @media (max-width: 768px) {
- .contact-item {
+  .contact-item {
     i {
       font-size: 1rem;
     }

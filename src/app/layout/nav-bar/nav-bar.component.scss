@@ -68,7 +68,7 @@
       height: 24px;
       width: 30px;
       cursor: pointer;
-      margin-left: auto; // Pushes it to the right
+      margin-left: auto; 
     }
 
     .hamburger-icon span {
@@ -133,4 +133,9 @@
   .hamburger-nav {
     display: flex;
   }
+}
+
+.desktop-nav li.active a,
+.hamburger-nav li.active a {
+  color: #007bff; 
 }

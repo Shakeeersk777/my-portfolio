@@ -5,14 +5,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5rem; // Increased gap for better spacing
-  background: $primary-bg-color;
+  gap: 5rem; 
+  background: $main-content-bg-color;
 
   .detail-box {
+    background: $primary-bg-color;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px; // Fixed width for uniformity
+    width: 500px;
     padding: 1.5rem;
     border: $border;
     border-radius: 8px;
@@ -30,19 +31,19 @@
 
     .icon {
       color: $primary-text-color;
-      font-size: 2rem; // Icon size
+      font-size: 2rem; 
       margin-bottom: 1rem;
     }
 
     h3 {
-      font-size: 1.5rem; // Title size
+      font-size: 1.5rem; 
       margin-bottom: 0.5rem;
       color: $primary-text-color;
     }
 
     p {
-      font-size: 1rem; // Paragraph size
-      color: $primary-text-color; // Subtle text color
+      font-size: 1rem; 
+      color: $primary-text-color; 
     }
   }
 }
@@ -50,12 +51,12 @@
 // Media Queries
 @media (max-width: 768px) {
   .details-container {
-    flex-direction: column; // Stack items on smaller screens
+    flex-direction: column; 
     align-items: center;
   }
 
   .detail-box {
-    width: 100%; // Full width on small screens
-    max-width: 300px; // Adjusted max width
+    width: 100%; 
+    max-width: 300px;
   }
 }

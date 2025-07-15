@@ -18,7 +18,7 @@ export const SECTION_LIST: ISectionList[] = [
     title: 'Projects',
     display: true,
   },
-  { id: 'contact', intro: 'Get in Touch', title: 'Contact Me', display: false },
+  { id: 'contact', intro: 'Get in Touch', title: 'Contact Me', display: true },
 ];
 
 export const NAV_LIST: INavList[] = [
@@ -56,6 +56,6 @@ export const NAV_LIST: INavList[] = [
     id: 'contact',
     label: 'Contact',
     sectionClass: 'contact-section',
-    display: false,
+    display: true,
   },
 ];
